@@ -1,38 +1,42 @@
 <script setup lang="ts">
-import { useMouseInElement } from '@vueuse/core'
+import { useMouseInElement } from '@vueuse/core';
 
 const props = defineProps({
-  as: {
-    type: String,
-    default: 'div',
-  },
-  from: {
-    type: String,
-    default: 'rgba(255,255,255,0.8)',
-  },
-  via: {
-    type: String,
-    required: false,
-    default: null,
-  },
-  to: {
-    type: String,
-    default: 'transparent',
-  },
-  size: {
-    type: Number,
-    default: 400,
-  },
-  mode: {
-    type: String,
-    default: 'before',
-  },
-})
+	as: {
+		type: String,
+		default: 'div',
+	},
+	from: {
+		type: String,
+		default: 'rgba(255,255,255,0.8)',
+	},
+	via: {
+		type: String,
+		required: false,
+		default: null,
+	},
+	to: {
+		type: String,
+		default: 'transparent',
+	},
+	size: {
+		type: Number,
+		default: 400,
+	},
+	mode: {
+		type: String,
+		default: 'before',
+	},
+});
 
-const card = ref()
-const { elementX, elementY } = useMouseInElement(card)
+const card = ref();
+const { elementX, elementY } = useMouseInElement(card);
+void elementX;
+void elementY;
 
-const spotlightColorStops = [props.from, props.via, props.to].filter(value => !!value).join(',')
+const _spotlightColorStops = [props.from, props.via, props.to]
+	.filter((value) => !!value)
+	.join(',');
 </script>
 
 <template>

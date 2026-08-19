@@ -1,22 +1,22 @@
 <script setup lang="ts">
 defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  date: {
-    type: String,
-    required: true,
-  },
-  image: {
-    type: String,
-    required: true,
-  },
-  path: {
-    type: String,
-    required: true,
-  },
-})
+	title: {
+		type: String,
+		required: true,
+	},
+	date: {
+		type: String,
+		required: true,
+	},
+	image: {
+		type: String,
+		required: true,
+	},
+	path: {
+		type: String,
+		required: true,
+	},
+});
 </script>
 
 <template>

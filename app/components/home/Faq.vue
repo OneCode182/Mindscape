@@ -1,41 +1,48 @@
 <script setup lang="ts">
-import { withLeadingSlash } from 'ufo'
-import type { Collections } from '@nuxt/content'
+import type { Collections } from '@nuxt/content';
+import { withLeadingSlash } from 'ufo';
 
-const route = useRoute()
-const { locale } = useI18n()
+const route = useRoute();
+const { locale } = useI18n();
 
-const slug = computed(() => withLeadingSlash(String(route.params.slug)))
-const { data: faq } = await useAsyncData('faq-' + slug.value, async () => {
-  const collection = ('faq_' + locale.value) as keyof Collections
-  return await queryCollection(collection).first() as Collections['faq_en'] | Collections['faq_fr']
-}, {
-  watch: [locale],
-})
+const slug = computed(() => withLeadingSlash(String(route.params.slug)));
+const { data: faq } = await useAsyncData(
+	`faq-${slug.value}`,
+	async () => {
+		const collection = `faq_${locale.value}` as keyof Collections;
+		return (await queryCollection(collection).first()) as
+			| Collections['faq_en']
+			| Collections['faq_fr'];
+	},
+	{
+		watch: [locale],
+	},
+);
 
-const items = computed(() => {
-  return faq.value?.faqQuestions.map((faq) => {
-    return {
-      label: faq.title,
-      key: faq.title.toLowerCase(),
-      questions: faq.questions,
-    }
-  })
-})
+const _items = computed(() => {
+	return faq.value?.faqQuestions.map((faq) => {
+		return {
+			label: faq.title,
+			key: faq.title.toLowerCase(),
+			questions: faq.questions,
+		};
+	});
+});
 
-const ui = {
-  root: 'flex items-center gap-4 w-full',
-  list: 'relative flex bg-transparent dark:bg-transparent gap-2',
-  indicator: 'absolute top-[4px] duration-200 ease-out focus:outline-none rounded-full bg-white/10 dark:bg-neutral-900',
-  trigger: [
-    'relative inline-flex items-center justify-center flex-shrink-0 focus:outline-none transition-colors duration-200 ease-out border-white/10 border-2',
-    'px-3 py-2 font-medium rounded-full',
-    'hover:bg-neutral-900/80',
-    'data-[state=active]:text-highlighted',
-    'data-[state=inactive]:text-muted',
-  ],
-  label: 'truncate',
-}
+const _ui = {
+	root: 'flex items-center gap-4 w-full',
+	list: 'relative flex bg-transparent dark:bg-transparent gap-2',
+	indicator:
+		'absolute top-[4px] duration-200 ease-out focus:outline-none rounded-full bg-white/10 dark:bg-neutral-900',
+	trigger: [
+		'relative inline-flex items-center justify-center flex-shrink-0 focus:outline-none transition-colors duration-200 ease-out border-white/10 border-2',
+		'px-3 py-2 font-medium rounded-full',
+		'hover:bg-neutral-900/80',
+		'data-[state=active]:text-highlighted',
+		'data-[state=inactive]:text-muted',
+	],
+	label: 'truncate',
+};
 </script>
 
 <template>

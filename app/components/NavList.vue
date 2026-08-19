@@ -1,20 +1,20 @@
 <script setup lang="ts">
 defineProps({
-  as: {
-    type: String,
-    default: 'div',
-  },
-})
+	as: {
+		type: String,
+		default: 'div',
+	},
+});
 
-const container = ref()
+const container = ref();
 
-const children = ref([])
+const children = ref([]);
 
 onMounted(() => {
-  children.value = Array.from(container.value.children)
-})
+	children.value = Array.from(container.value.children);
+});
 
-provide('peers', children)
+provide('peers', children);
 </script>
 
 <template>

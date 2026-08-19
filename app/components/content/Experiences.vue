@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
+import type { PropType } from 'vue';
 
 defineProps({
-  experiences: {
-    type: Object as PropType<{ title: string, date: string, company: string }[]>,
-    required: true,
-  },
-})
+	experiences: {
+		type: Object as PropType<
+			{ title: string; date: string; company: string }[]
+		>,
+		required: true,
+	},
+});
 </script>
 
 <template>

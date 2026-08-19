@@ -1,41 +1,54 @@
 <script lang="ts" setup>
-import type { Collections } from '@nuxt/content'
-import { withLeadingSlash, joinURL } from 'ufo'
+import type { Collections } from '@nuxt/content';
+import { joinURL, withLeadingSlash } from 'ufo';
 
-const route = useRoute()
-const { locale, t, localeProperties } = useI18n()
+const route = useRoute();
+const { locale, t, localeProperties } = useI18n();
+void localeProperties;
 
-const slug = computed(() => Array.isArray(route.params.slug) ? route.params.slug as string[] : [route.params.slug as string])
-const path = computed(() => withLeadingSlash(joinURL(locale.value, 'articles', ...slug.value)))
-const collection = computed(() => `articles_${locale.value}` as keyof Collections)
+const slug = computed(() =>
+	Array.isArray(route.params.slug)
+		? (route.params.slug as string[])
+		: [route.params.slug as string],
+);
+const path = computed(() =>
+	withLeadingSlash(joinURL(locale.value, 'articles', ...slug.value)),
+);
+const collection = computed(
+	() => `articles_${locale.value}` as keyof Collections,
+);
 
-const { data: page } = await useAsyncData(path.value, async () =>
-  await queryCollection(collection.value).path(path.value).first() as Collections['articles_en'] | Collections['articles_fr'],
-)
+const { data: page } = await useAsyncData(
+	path.value,
+	async () =>
+		(await queryCollection(collection.value).path(path.value).first()) as
+			| Collections['articles_en']
+			| Collections['articles_fr'],
+);
 
 if (!page.value)
-  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
+	throw createError({ statusCode: 404, statusMessage: 'Page not found' });
 
-const { copy } = useClipboard()
+const { copy } = useClipboard();
 
-function copyArticleLink() {
-  copy(`${window.location.origin}${route.fullPath}`)
-  toast.success(t('global.article_link_copied'))
+function _copyArticleLink() {
+	copy(`${window.location.origin}${route.fullPath}`);
+	toast.success(t('global.article_link_copied'));
 }
 
 defineShortcuts({
-  meta_k: {
-    usingInput: true,
-    handler: () => {
-      copy(`${window.location.origin}${route.fullPath}`)
-      toast.success(t('global.article_link_copied'))
-    },
-  },
-})
+	meta_k: {
+		usingInput: true,
+		handler: () => {
+			copy(`${window.location.origin}${route.fullPath}`);
+			toast.success(t('global.article_link_copied'));
+		},
+	},
+});
 
 defineOgImage({
-  url: page.value.image,
-})
+	url: page.value.image,
+});
 </script>
 
 <template>

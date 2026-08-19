@@ -1,50 +1,50 @@
 <script setup lang="ts">
-import * as z from 'zod'
-import type { FormSubmitEvent } from '#ui/types'
+import * as z from 'zod';
+import type { FormSubmitEvent } from '#ui/types';
 
-const { profile } = useAppConfig()
-const { t } = useI18n()
+const { profile } = useAppConfig();
+const { t } = useI18n();
+void profile;
 
-const isResendEnabled = useRuntimeConfig().public.resend
+const _isResendEnabled = useRuntimeConfig().public.resend;
 
 const state = ref({
-  email: '',
-  message: '',
-  phone: '',
-  fullname: '',
-  subject: '',
-})
+	email: '',
+	message: '',
+	phone: '',
+	fullname: '',
+	subject: '',
+});
 
 const schema = z.object({
-  email: z.string().email('Invalid email'),
-  message: z.string().min(10, 'Message is too short'),
-  subject: z.string().min(5, 'Subject is too short'),
-  fullname: z.string().min(3, 'Name is too short'),
-})
-type Schema = z.output<typeof schema>
+	email: z.string().email('Invalid email'),
+	message: z.string().min(10, 'Message is too short'),
+	subject: z.string().min(5, 'Subject is too short'),
+	fullname: z.string().min(3, 'Name is too short'),
+});
+type Schema = z.output<typeof schema>;
 
-const loading = ref(false)
+const loading = ref(false);
 
-async function onSubmit(event: FormSubmitEvent<Schema>) {
-  loading.value = true
-  try {
-    await $fetch('/api/emails/send', {
-      method: 'POST',
-      body: event.data,
-    })
-    state.value = {
-      email: '',
-      message: '',
-      phone: '',
-      fullname: '',
-      subject: '',
-    }
-    toast.success(t('contact.success'))
-  }
-  catch {
-    toast.error(t('contact.error'))
-  }
-  loading.value = false
+async function _onSubmit(event: FormSubmitEvent<Schema>) {
+	loading.value = true;
+	try {
+		await $fetch('/api/emails/send', {
+			method: 'POST',
+			body: event.data,
+		});
+		state.value = {
+			email: '',
+			message: '',
+			phone: '',
+			fullname: '',
+			subject: '',
+		};
+		toast.success(t('contact.success'));
+	} catch {
+		toast.error(t('contact.error'));
+	}
+	loading.value = false;
 }
 </script>
 

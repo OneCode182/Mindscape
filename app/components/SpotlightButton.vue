@@ -1,22 +1,22 @@
 <script setup lang="ts">
 defineProps({
-  as: {
-    type: String,
-    default: 'button',
-  },
-  rounded: {
-    type: Boolean,
-    default: false,
-  },
-  animate: {
-    type: Boolean,
-    default: true,
-  },
-  transparent: {
-    type: Boolean,
-    default: false,
-  },
-})
+	as: {
+		type: String,
+		default: 'button',
+	},
+	rounded: {
+		type: Boolean,
+		default: false,
+	},
+	animate: {
+		type: Boolean,
+		default: true,
+	},
+	transparent: {
+		type: Boolean,
+		default: false,
+	},
+});
 </script>
 
 <template>

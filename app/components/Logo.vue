@@ -1,12 +1,13 @@
 <script setup lang="ts">
-const { appName } = useAppConfig()
+const { appName } = useAppConfig();
+void appName;
 
 defineProps({
-  isText: {
-    type: Boolean,
-    default: false,
-  },
-})
+	isText: {
+		type: Boolean,
+		default: false,
+	},
+});
 </script>
 
 <template>

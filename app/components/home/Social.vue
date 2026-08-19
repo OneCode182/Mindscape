@@ -1,19 +1,21 @@
 <script setup lang="ts">
 const socialMediaRegexMap = [
-  { regex: /github\.com/, name: 'GitHub', icon: 'custom:github' },
-  { regex: /twitter\.com/, name: 'X / Twitter', icon: 'custom:x' },
-  { regex: /linkedin\.com/, name: 'LinkedIn', icon: 'custom:linkedin' },
-  { regex: /instagram\.com/, name: 'Instagram', icon: 'custom:instagram' },
-  { regex: /spotify\.com/, name: 'Spotify', icon: 'custom:spotify' },
-]
+	{ regex: /github\.com/, name: 'GitHub', icon: 'custom:github' },
+	{ regex: /twitter\.com/, name: 'X / Twitter', icon: 'custom:x' },
+	{ regex: /linkedin\.com/, name: 'LinkedIn', icon: 'custom:linkedin' },
+	{ regex: /instagram\.com/, name: 'Instagram', icon: 'custom:instagram' },
+	{ regex: /spotify\.com/, name: 'Spotify', icon: 'custom:spotify' },
+];
 
-const { socials } = useAppConfig()
-const mappedSocials = Object.values(socials).map((link) => {
-  const foundSocial = socialMediaRegexMap.find(social => social.regex.test(link))
-  if (!foundSocial) throw new Error(`No social media found for link: ${link}`)
-  const { name, icon } = foundSocial
-  return { name, link, icon }
-})
+const { socials } = useAppConfig();
+const _mappedSocials = Object.values(socials).map((link) => {
+	const foundSocial = socialMediaRegexMap.find((social) =>
+		social.regex.test(link),
+	);
+	if (!foundSocial) throw new Error(`No social media found for link: ${link}`);
+	const { name, icon } = foundSocial;
+	return { name, link, icon };
+});
 </script>
 
 <template>

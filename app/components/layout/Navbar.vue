@@ -1,15 +1,15 @@
 <script lang="ts" setup>
 defineProps({
-  isText: {
-    type: Boolean,
-    default: false,
-  },
-})
+	isText: {
+		type: Boolean,
+		default: false,
+	},
+});
 
-const navigation = getNavigation('home') as Record<string, Navigation>
+const _navigation = getNavigation('home') as Record<string, Navigation>;
 
-const route = useRoute()
-const localePath = useLocalePath()
+const _route = useRoute();
+const _localePath = useLocalePath();
 </script>
 
 <template>

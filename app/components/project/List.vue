@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import projects from '~/data/projects'
-
-const localePath = useLocalePath()
+const _localePath = useLocalePath();
 </script>
 
 <template>

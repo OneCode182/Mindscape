@@ -1,16 +1,16 @@
 <script setup lang="ts">
 defineProps({
-  row: {
-    type: Number,
-    required: true,
-  },
-  column: {
-    type: Number,
-    required: true,
-  },
-})
+	row: {
+		type: Number,
+		required: true,
+	},
+	column: {
+		type: Number,
+		required: true,
+	},
+});
 
-const grid = inject('grid-context')
+const _grid = inject('grid-context');
 </script>
 
 <template>

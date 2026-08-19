@@ -1,13 +1,13 @@
 <script setup lang="ts">
 defineProps<{
-  project: {
-    name: string
-    release: string
-    image: string
-    link: string
-  }
-}>()
-const img = useImage()
+	project: {
+		name: string;
+		release: string;
+		image: string;
+		link: string;
+	};
+}>();
+const _img = useImage();
 </script>
 
 <template>

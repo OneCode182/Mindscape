@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { Toaster } from 'vue-sonner'
-import * as locales from '@nuxt/ui/locale'
+const { locale } = useI18n();
 
-const { locale } = useI18n()
+void locale;
 </script>
 
 <template>

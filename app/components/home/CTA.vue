@@ -1,6 +1,4 @@
-<script setup lang="ts">
-const { t } = useI18n()
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="flex flex-col items-center justify-center gap-4 sm:gap-2">
