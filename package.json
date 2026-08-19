@@ -45,6 +45,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.8",
+		"@iconify-json/heroicons": "^1.2.3",
 		"@nuxt/eslint-config": "1.16.0",
 		"automd": "0.4.3",
 		"eslint": "9.39.5",

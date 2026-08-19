@@ -57,7 +57,7 @@ export default defineAppConfig({
 			},
 		},
 		icons: {
-			loading: 'lucide:loader',
+			loading: 'heroicons:arrow-path',
 		},
 	},
 	link: [

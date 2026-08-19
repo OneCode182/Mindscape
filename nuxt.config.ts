@@ -21,7 +21,7 @@ export default defineNuxtConfig({
 	},
 
 	devtools: {
-		enabled: true,
+		enabled: false,
 	},
 
 	css: ['~/assets/style/main.css'],
@@ -40,7 +40,7 @@ export default defineNuxtConfig({
 	content: {
 		preview: {
 			api: 'https://api.nuxt.studio',
-			dev: true,
+			dev: false,
 		},
 	},
 
@@ -101,7 +101,8 @@ export default defineNuxtConfig({
 		],
 		detectBrowserLanguage: {
 			useCookie: true,
-			cookieKey: 'i18n_redirected',
+			cookieKey: 'mindscape_i18n_redirected',
+			fallbackLocale: 'en',
 			redirectOn: 'root',
 		},
 		strategy: 'prefix',
@@ -115,11 +116,27 @@ export default defineNuxtConfig({
 				dir: './app/assets/icons',
 			},
 		],
+		serverBundle: {
+			collections: ['heroicons'],
+		},
 		clientBundle: {
 			scan: true,
 			includeCustomCollections: true,
+			icons: [
+				'heroicons:arrow-left',
+				'heroicons:arrow-path',
+				'heroicons:arrow-right',
+				'heroicons:arrow-up',
+				'heroicons:briefcase',
+				'heroicons:building-library',
+				'heroicons:calendar-days',
+				'heroicons:envelope',
+				'heroicons:home',
+				'heroicons:phone',
+				'heroicons:plus',
+				'heroicons:user',
+			],
 		},
-		provider: 'iconify',
 	},
 
 	ogImage: {
@@ -127,6 +144,7 @@ export default defineNuxtConfig({
 	},
 
 	studio: {
+		dev: false,
 		route: '/admin',
 
 		repository: {
