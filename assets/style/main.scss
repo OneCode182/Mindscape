@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "animation";
+@import "themes/dark";
+@import "themes/light";
+
+html, body, #__nuxt, #__layout {
+  height: 100% !important;
+  width: 100% !important;
+  font-family: "Inter V", sans-serif;
+
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+    padding: 0.5rem;
+  }
+
+    ::-webkit-scrollbar-track {
+        background: var(--bg-secondary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--bg-card);
+        border-radius: 0.5rem;
+    }
+}
+
+@font-face {
+  font-family: "Testimonial";
+  src: local("Testimonial"), url("/assets/font/PPEditorialNew-UltralightItalic.otf") format("opentype");
+  font-display: swap;
+}
+
+@layer components {
+  .font-testimonial {
+    font-family: "Testimonial", sans-serif;
+    @apply tracking-wider
+  }
+
+  .input {
+    @apply bg-secondary;
+    @apply text-primary placeholder:text-placeholder;
+    @apply rounded-md border-[1px] border-primary hover:border-primary-hover;
+    @apply focus:outline-none focus:ring-2 focus:ring-accent;
+    @apply px-4 py-2;
+  }
+
+  .gradient {
+    @apply bg-gradient-to-bl from-accent-primary to-accent-secondary;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    @apply bg-gradient-to-bl from-accent-primary to-accent-secondary;
+  }
+
+  .white-gradient-tb {
+    @apply bg-clip-text text-transparent tracking-wide;
+    @apply bg-gradient-to-b from-white to-gray-400;
+  }
+
+  .linebreak {
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    width: 100%;
+    height: 1px;
+    margin: 0 auto;
+    background-image: linear-gradient(96.18deg, rgba(215, 196, 255, 0) 10%, rgba(91, 91, 91, 0.24) 50%, rgba(215, 196, 255, 0) 90%);
+  }
+
+  .btn-primary {
+    @apply flex items-center justify-center gap-2 px-8 py-1;
+    @apply bg-card hover:bg-card-hover rounded-md text-muted shadow-sm;
+    @apply border-[1px] border-primary hover:border-primary-hover;
+    @apply transition-colors duration-200;
+  }
+
+  .t-card {
+    @apply bg-secondary rounded-lg border-[1px] border-primary w-full shadow-md;
+  }
+
+  .card {
+    @apply flex p-2 gap-4 rounded-lg text-primary w-full;
+    @apply bg-card hover:bg-card-hover shadow-sm;
+    @apply border-[1px] border-primary hover:border-primary-hover;
+    @apply transition-colors duration-200 ease-in-out cursor-pointer;
+  }
+
+  .kbd {
+    @apply bg-primary-opacity/30 hover:bg-card-hover rounded-md text-muted shadow-sm px-2;
+    @apply border-[1px] border-primary hover:border-primary-hover;
+    @apply transition-colors duration-200;
+  }
+}
