@@ -28,15 +28,16 @@
     "@vueuse/nuxt": "14.4.0",
     "better-sqlite3": "^12.11.1",
     "nuxt": "4.5.1",
+    "nuxt-studio": "1.7.0",
     "resend": "6.18.1",
     "sitemap": "9.0.1",
-    "nuxt-studio": "1.7.0",
     "ufo": "^1.6.4",
     "vue-sonner": "2.0.9"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "1.16.0",
     "automd": "0.4.3",
-    "eslint": "9.39.5"
+    "eslint": "9.39.5",
+    "typescript": "^7.0.2"
   }
 }
