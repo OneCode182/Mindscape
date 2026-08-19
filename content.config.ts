@@ -77,7 +77,7 @@ function asSeoCollection(collection: SeoCollectionInput) {
 	});
 	const schemaOrgSchema = z.union([
 		z.record(z.string(), z.any()),
-		z.array(z.record(z.string(), z.any())).optional(),
+		z.array(z.record(z.string(), z.any())),
 	]);
 	const schema = z.object({
 		schemaOrg: schemaOrgSchema.optional(),
@@ -85,8 +85,8 @@ function asSeoCollection(collection: SeoCollectionInput) {
 	const headSchema = z.object({
 		head: z
 			.object({
-				meta: z.array(z.record(z.string(), z.any()).optional()),
-				script: z.array(z.record(z.string(), z.any()).optional()),
+				meta: z.array(z.record(z.string(), z.any())).optional(),
+				script: z.array(z.record(z.string(), z.any())).optional(),
 			})
 			.optional(),
 	});
