@@ -6,11 +6,11 @@ defineProps({
 	},
 });
 
-function _handleError() {
+function handleError() {
 	clearError({ redirect: '/' });
 }
 
-function _goBack() {
+function goBack() {
 	clearError();
 	useRouter().back();
 }

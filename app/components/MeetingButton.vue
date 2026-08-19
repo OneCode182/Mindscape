@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const _meetingLink = useAppConfig().global.meetingLink;
+const meetingLink = useAppConfig().global.meetingLink;
 </script>
 
 <template>

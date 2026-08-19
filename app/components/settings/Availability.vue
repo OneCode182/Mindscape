@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const appConfig = useAppConfig().global;
 
-const _currentAvailability = computed(() => {
+const currentAvailability = computed(() => {
 	return [
 		{
 			status: 'available',

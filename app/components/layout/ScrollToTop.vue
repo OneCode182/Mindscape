@@ -7,7 +7,7 @@ onMounted(() => {
 	});
 });
 
-function _scrollToTop() {
+function scrollToTop() {
 	window.scrollTo({
 		top: 0,
 		behavior: 'smooth',
@@ -25,7 +25,7 @@ function _scrollToTop() {
       @click="scrollToTop"
     >
       <UIcon
-        name="heroicons-arrow-up"
+        name="heroicons:arrow-up"
         class="z-20 size-6"
       />
     </SpotlightButton>

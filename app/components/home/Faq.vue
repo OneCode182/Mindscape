@@ -19,7 +19,7 @@ const { data: faq } = await useAsyncData(
 	},
 );
 
-const _items = computed(() => {
+const items = computed(() => {
 	return faq.value?.faqQuestions.map((faq) => {
 		return {
 			label: faq.title,
@@ -29,7 +29,7 @@ const _items = computed(() => {
 	});
 });
 
-const _ui = {
+const ui = {
 	root: 'flex items-center gap-4 w-full',
 	list: 'relative flex bg-transparent dark:bg-transparent gap-2',
 	indicator:
@@ -63,7 +63,7 @@ const _ui = {
       <template #content="{ item }">
         <UAccordion
           :unmount-on-hide="false"
-          trailing-icon="lucide:plus"
+          trailing-icon="heroicons:plus"
           :items="item.questions"
           :ui="{
             item: 'mb-2 group px-4 transform-gpu rounded-xl border border-white/10 bg-white/5 transition duration-500 will-change-transform hover:bg-white/[0.075]',

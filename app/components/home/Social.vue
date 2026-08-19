@@ -8,7 +8,7 @@ const socialMediaRegexMap = [
 ];
 
 const { socials } = useAppConfig();
-const _mappedSocials = Object.values(socials).map((link) => {
+const mappedSocials = Object.values(socials).map((link) => {
 	const foundSocial = socialMediaRegexMap.find((social) =>
 		social.regex.test(link),
 	);

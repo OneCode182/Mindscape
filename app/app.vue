@@ -1,18 +1,36 @@
 <script setup lang="ts">
 const { locale } = useI18n();
 
-void locale;
+const uiLocales = {
+	en: {
+		name: 'English',
+		code: 'en',
+		dir: 'ltr',
+		messages: {},
+	},
+	fr: {
+		name: 'Français',
+		code: 'fr',
+		dir: 'ltr',
+		messages: {},
+	},
+} as const;
+
+const appLocale = computed(() => {
+	const current = typeof locale.value === 'string' ? locale.value.split('-')[0] : 'en';
+	return uiLocales[current as keyof typeof uiLocales] || uiLocales.en;
+});
 </script>
 
 <template>
   <Html
-    :lang="locale"
+    :lang="appLocale.code"
     class="font-geist text-[var(--ui-text)] transition-colors duration-300 selection:bg-white/60 selection:text-zinc-800"
   >
     <Body>
       <LayoutScrollToTop />
       <NuxtLayout>
-        <UApp :locale="locales[locale]">
+        <UApp :locale="appLocale">
           <NuxtPage />
         </UApp>
       </NuxtLayout>

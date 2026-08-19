@@ -8,8 +8,9 @@ defineProps({
 
 const _navigation = getNavigation('home') as Record<string, Navigation>;
 
-const _route = useRoute();
-const _localePath = useLocalePath();
+const route = useRoute();
+const localePath = useLocalePath();
+const navigation = _navigation;
 </script>
 
 <template>

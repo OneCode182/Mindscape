@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { t } = useI18n();
+</script>
 
 <template>
   <div class="flex flex-col items-center justify-center gap-4 sm:gap-2">
@@ -14,7 +16,7 @@
           >
             {{ t("global.contact") }}
             <UIcon
-              name="heroicons-envelope"
+              name="heroicons:envelope"
               class="size-5 text-white/80"
             />
           </NuxtLinkLocale>

@@ -62,7 +62,7 @@ defineOgImage({
       class="mx-auto my-8 flex cursor-pointer items-center gap-2 px-4 text-muted hover:text-primary transition-colors duration-200 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl"
     >
       <UIcon
-        name="lucide:arrow-left"
+        name="heroicons:arrow-left"
         class="size-4"
       />
       <span class="text-sm font-extralight">

@@ -155,7 +155,7 @@ async function _onSubmit(event: FormSubmitEvent<Schema>) {
         <div class="flex flex-col gap-3">
           <dd class="flex items-center gap-3 text-neutral-400">
             <UIcon
-              name="heroicons-phone"
+              name="heroicons:phone"
               class="size-6"
               aria-hidden="true"
             />
@@ -165,7 +165,7 @@ async function _onSubmit(event: FormSubmitEvent<Schema>) {
           </dd>
           <dd class="flex items-center gap-3 text-neutral-400">
             <UIcon
-              name="heroicons-envelope"
+              name="heroicons:envelope"
               class="size-6"
               aria-hidden="true"
             />

@@ -2,7 +2,7 @@
 import type { Collections } from '@nuxt/content';
 
 const { locale } = useI18n();
-const _localePath = useLocalePath();
+const localePath = useLocalePath();
 
 const { data: projects } = await useAsyncData(
 	'projects',

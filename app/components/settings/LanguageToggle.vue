@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { locale: current, setLocaleCookie, locales } = useI18n();
 
-const _currentLocale = computed(() => {
+const currentLocale = computed(() => {
 	return locales.value.find((locale) => locale.code === current.value);
 });
 
@@ -9,7 +9,7 @@ watch(current, (newLocale) => {
 	setLocaleCookie(newLocale);
 });
 
-const _switchLocalePath = useSwitchLocalePath();
+const switchLocalePath = useSwitchLocalePath();
 </script>
 
 <template>
