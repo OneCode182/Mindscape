@@ -12,7 +12,7 @@ const { data: faq } = await useAsyncData(
 		const collection = `faq_${locale.value}` as keyof Collections;
 		return (await queryCollection(collection).first()) as
 			| Collections['faq_en']
-			| Collections['faq_fr'];
+			| Collections['faq_es'];
 	},
 	{
 		watch: [locale],

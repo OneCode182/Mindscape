@@ -2,23 +2,23 @@
 const { locale } = useI18n();
 
 const uiLocales = {
+	es: {
+		name: 'Español',
+		code: 'es',
+		dir: 'ltr',
+		messages: {},
+	},
 	en: {
 		name: 'English',
 		code: 'en',
 		dir: 'ltr',
 		messages: {},
 	},
-	fr: {
-		name: 'Français',
-		code: 'fr',
-		dir: 'ltr',
-		messages: {},
-	},
 } as const;
 
 const appLocale = computed(() => {
-	const current = typeof locale.value === 'string' ? locale.value.split('-')[0] : 'en';
-	return uiLocales[current as keyof typeof uiLocales] || uiLocales.en;
+	const current = typeof locale.value === 'string' ? locale.value.split('-')[0] : 'es';
+	return uiLocales[current as keyof typeof uiLocales] || uiLocales.es;
 });
 </script>
 

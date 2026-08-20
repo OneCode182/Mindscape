@@ -9,7 +9,7 @@ const { data: projects } = await useAsyncData(
 		const collection = `projects_${locale.value}` as keyof Collections;
 		return (await queryCollection(collection).all()) as
 			| Collections['projects_en'][]
-			| Collections['projects_fr'][];
+			| Collections['projects_es'][];
 	},
 	{
 		watch: [locale],

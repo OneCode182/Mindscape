@@ -23,7 +23,7 @@ const { data: page } = await useAsyncData(
 	async () =>
 		(await queryCollection(collection.value).path(path.value).first()) as
 			| Collections['content_en']
-			| Collections['content_fr'],
+			| Collections['content_es'],
 );
 
 if (!page.value)

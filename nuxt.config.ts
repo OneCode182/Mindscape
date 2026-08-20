@@ -28,7 +28,7 @@ export default defineNuxtConfig({
 
 	site: {
 		url: 'https://canvas.hrcd.fr',
-		defaultLocale: 'en',
+		defaultLocale: 'es',
 		indexable: true,
 	},
 
@@ -78,7 +78,7 @@ export default defineNuxtConfig({
 		prerender: {
 			autoSubfolderIndex: false,
 			crawlLinks: true,
-			routes: ['/en', '/fr'],
+			routes: ['/es', '/en'],
 		},
 	},
 
@@ -96,17 +96,17 @@ export default defineNuxtConfig({
 
 	i18n: {
 		locales: [
+			{ code: 'es', name: 'Español', language: 'es-ES' },
 			{ code: 'en', name: 'English', language: 'en-US' },
-			{ code: 'fr', name: 'French', language: 'fr-FR' },
 		],
 		detectBrowserLanguage: {
 			useCookie: true,
 			cookieKey: 'mindscape_i18n_redirected',
-			fallbackLocale: 'en',
+			fallbackLocale: 'es',
 			redirectOn: 'root',
 		},
 		strategy: 'prefix',
-		defaultLocale: 'en',
+		defaultLocale: 'es',
 	},
 
 	icon: {
