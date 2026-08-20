@@ -47,8 +47,9 @@
 		"@biomejs/biome": "2.5.8",
 		"@iconify-json/heroicons": "^1.2.3",
 		"@nuxt/eslint-config": "1.16.0",
+		"@typescript/native": "npm:typescript@^7.0.2",
 		"automd": "0.4.3",
 		"eslint": "9.39.5",
-		"typescript": "^7.0.2"
+		"typescript": "npm:@typescript/typescript6@^6.0.2"
 	}
 }
