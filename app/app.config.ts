@@ -4,8 +4,8 @@ export default defineAppConfig({
 		available: true,
 	},
 	profile: {
-		name: 'Hugo Richard',
-		job: 'Frontend Architect and Designer',
+		name: 'Sergio Andrey Silva Rodríguez',
+		job: 'Systems Engineer and Software Developer',
 		email: 'contact@hrcd.fr',
 		phone: '(+33) 6 21 56 22 18',
 		picture: '/profile/selfie.jpg',
