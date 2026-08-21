@@ -17,7 +17,8 @@ const uiLocales = {
 } as const;
 
 const appLocale = computed(() => {
-	const current = typeof locale.value === 'string' ? locale.value.split('-')[0] : 'es';
+	const current =
+		typeof locale.value === 'string' ? locale.value.split('-')[0] : 'es';
 	return uiLocales[current as keyof typeof uiLocales] || uiLocales.es;
 });
 </script>
