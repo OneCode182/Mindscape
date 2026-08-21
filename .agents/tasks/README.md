@@ -20,6 +20,7 @@ Concise, durable records for meaningful work. Task files are the resume/audit so
 | TASK-HARNESS-BOOTSTRAP | [harness-bootstrap.task.md](harness-bootstrap.task.md) | done | Initial harness creation |
 | TASK-PR-HARNESS-BOOTSTRAP | [pr-harness-bootstrap.task.md](pr-harness-bootstrap.task.md) | done | PR agents, Git audit, and GitHub CLI flow |
 | TASK-HOME-WORK-EXPERIENCE | [home-work-experience.task.md](home-work-experience.task.md) | done | CV-based work experience above home projects |
+| TASK-HOME-HERO-REFRESH | [home-hero-refresh.task.md](home-hero-refresh.task.md) | done | Shelve-inspired black hero with left copy and right portrait |
 
 ## Resume rule
 
