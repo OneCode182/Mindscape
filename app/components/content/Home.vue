@@ -59,6 +59,12 @@
           data-animate
           class="mt-12 flex w-full max-w-3xl flex-col gap-4 lg:mt-16"
         >
+          <!-- work experience -->
+          <slot
+            name="experiences"
+            mdc-unwrap="p"
+          />
+
           <!-- projects -->
           <HomeProjects />
         </div>
