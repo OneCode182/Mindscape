@@ -62,6 +62,7 @@ Home hero presents the owner's name and CV summary on the left with a portrait o
 | 2026-08-20 | Split hero and experience into dark sections with a soft bridge | Preserves the black hero while giving the experience area its own dotted surface | `app/components/content/Home.vue`, Shelve `BgGradient.vue` |
 | 2026-08-20 | Remove the bridge divider and blend section backgrounds vertically | Prevents a bar-like overlay and keeps the light treatment and dots continuous | `app/components/content/Home.vue` |
 | 2026-08-20 | Let Home bleed behind the fixed navbar | Removes the layout's top band so the hero gradient starts continuously under the header | `app/components/content/Home.vue`, `app/layouts/default.vue` |
+| 2026-08-20 | Add a subtle gradient separator at the Hero/Experience boundary | Matches Shelve's section transition without introducing a solid bar | `app/components/content/Home.vue` |
 
 ## Validation evidence
 
@@ -87,6 +88,7 @@ Home hero presents the owner's name and CV summary on the left with a portrait o
 - Files changed: hero layout, profile presentation, dark background, localized hero content, section transition, dotted backgrounds
 - Follow-up: removed the horizontal bridge divider and softened the section boundary with a vertical gradient.
 - Follow-up: offset Home by the desktop navbar height to remove the top layout band under the fixed header.
+- Follow-up: restored a thin gradient separator only between Hero and Experience.
 - Next step: None.
 
 ## Blockers and risks
