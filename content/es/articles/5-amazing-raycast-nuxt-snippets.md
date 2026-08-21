@@ -1,19 +1,19 @@
 ---
-title: 5 Snippets Raycast Nuxt (Vue) pour améliorer vos projets
+title: 5 snippets de Raycast para Nuxt (Vue) que mejorarán tus proyectos
 date: 22/01/2024
-description: Dans le domaine du développement web, où l'efficacité est aussi
-  précieuse que l'expertise, les outils qui rationalisent et simplifient notre
-  flux de travail sont indispensables. Parmi ceux-ci, les extraits de code
-  Raycast émergent comme un allié puissant, surtout pour ceux qui travaillent
-  avec les frameworks Nuxt et Vue. Mais qu'est-ce que ces extraits de code, et
-  comment peuvent-ils transformer votre expérience de développement ?
+description: En el desarrollo web, donde la eficiencia es tan valiosa como la
+  experiencia, las herramientas que agilizan y simplifican nuestro flujo de
+  trabajo son indispensables. Entre ellas, los snippets de Raycast destacan
+  como un aliado muy potente, especialmente para quienes trabajan con los
+  frameworks Nuxt y Vue. Pero ¿qué son estos snippets y cómo pueden transformar
+  tu experiencia de desarrollo?
 tags:
   - Nuxt
   - Vue
   - Raycast
-  - Productivité
+  - Productividad
 image: https://canvas.hrcd.fr/articles/5-raycast-snippets.jpg
 readingTime: "10"
 ---
 
-Arrive bientôt !
+¡Próximamente!

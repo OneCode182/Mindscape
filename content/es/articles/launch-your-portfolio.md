@@ -1,49 +1,49 @@
 ---
-title: Fini ton portfolio !
+title: ¡Termina tu portafolio!
 date: 20/10/2023
-description: Viser le perfectionnisme est un très bon état d'esprit. D'un autre
-  côté, travailler jusqu'à ce que le perfectionnisme soit à 100 % peut aussi
-  être mauvais. Voici quelques conseils pour vous aider à lancer votre
-  portfolio.
+description: Aspirar al perfeccionismo es una actitud muy positiva. Sin embargo,
+  trabajar hasta alcanzar el 100 % del perfeccionismo también puede ser
+  perjudicial. Aquí tienes algunos consejos para ayudarte a lanzar tu
+  portafolio.
 tags:
   - Portfolio
-  - Développement
+  - Desarrollo
   - Design
-  - Productivité
+  - Productividad
 image: https://canvas.hrcd.fr/articles/launch-your-porfolio.jpg
 readingTime: "5"
 ---
 
-## Introduction
+## Introducción
 
-La création d'un portfolio en tant que professionnel du développement, du design ou de la tech est un voyage ponctué de choix complexes. L'un de ces dilemmes les plus prégnants réside dans le délicat équilibre entre l'aspiration à la perfection et la nécessité de lancer rapidement. Explorez avec moi les nuances de ces perspectives contradictoires.
+Crear un portafolio como profesional del desarrollo, el diseño o la tecnología es un viaje lleno de decisiones complejas. Uno de los dilemas más importantes reside en el delicado equilibrio entre aspirar a la perfección y la necesidad de lanzar rápidamente. Exploremos las sutilezas de estas perspectivas contrapuestas.
 
 ![preview](/articles/launch-your-porfolio.jpg)
 
-### L'aspiration à la perfection : un idéal inatteignable ?
+### Aspirar a la perfección: ¿un ideal inalcanzable?
 
-La vision traditionnelle de la création artistique nous incite à poursuivre la perfection dès le départ. Chaque ligne de code, chaque élément de design devrait converger vers l'excellence absolue. Cependant, ce rêve de perfection peut parfois devenir un fardeau, un frein au progrès. La quête incessante de la perfection peut paralyser le processus créatif, transformant la création en une poursuite infinie.
+La visión tradicional de la creación artística nos impulsa a buscar la perfección desde el principio. Cada línea de código y cada elemento de diseño deberían converger hacia la excelencia absoluta. Sin embargo, este sueño de perfección puede convertirse en una carga y frenar el progreso. La búsqueda incesante de la perfección puede paralizar el proceso creativo y transformar la creación en una persecución interminable.
 
-### Le Piège du perfectionnisme : quand le mieux devient l'ennemi du bien
+### La trampa del perfeccionismo: cuando lo mejor se convierte en enemigo de lo bueno
 
-Le perfectionnisme peut se transformer en un piège subtil. Attendre que chaque détail soit impeccable peut retarder indéfiniment la mise en ligne du portfolio. Ce piétinement prolongé peut avoir des implications sur la crédibilité professionnelle, car le marché exige souvent une présence en ligne rapide et dynamique.
+El perfeccionismo puede convertirse en una trampa sutil. Esperar a que cada detalle sea impecable puede retrasar indefinidamente la publicación del portafolio. Este estancamiento prolongado puede afectar a la credibilidad profesional, ya que el mercado suele exigir una presencia online rápida y dinámica.
 
-### La proposition audacieuse de lancer rapidement : itérer plutôt que parfaire
+### La propuesta audaz de lanzar rápido: iterar en lugar de perfeccionar
 
-L'idée de lancer rapidement, même si le portfolio n'atteint pas un niveau de perfection immédiat, offre une perspective alternative. Il s'agit de reconnaître que chaque itération peut être une amélioration par rapport à la précédente. Cette approche encourage une mentalité d'itération constante, où chaque version devient une opportunité d'apprentissage.
+La idea de lanzar rápidamente, aunque el portafolio no alcance de inmediato un nivel de perfección, ofrece una perspectiva alternativa. Se trata de reconocer que cada iteración puede mejorar la anterior. Este enfoque fomenta una mentalidad de iteración constante, en la que cada versión se convierte en una oportunidad de aprendizaje.
 
-### Rapidité comme moyen d'apprentissage : créer en faisant
+### La rapidez como forma de aprender: crear mientras haces
 
-Lancer rapidement devient ainsi un moyen d'apprentissage. La rapidité n'est pas synonyme de compromis sur la qualité, mais plutôt d'une acceptation que la perfection peut être inatteignable initialement. C'est une invitation à apprendre en faisant, à utiliser chaque version du portfolio comme un terrain d'expérimentation.
+Lanzar rápidamente se convierte así en una forma de aprender. La rapidez no significa renunciar a la calidad, sino aceptar que la perfección puede ser inalcanzable al principio. Es una invitación a aprender haciendo y a utilizar cada versión del portafolio como un terreno de experimentación.
 
-### L'importance cruciale du temps : efficacité temporelle et gestion judicieuse
+### La importancia crucial del tiempo: eficiencia y gestión inteligente
 
-Le temps joue un rôle crucial dans ce débat. L'efficacité temporelle, soulignée par la perspective de la rapidité, devient une compétence essentielle. La gestion judicieuse du temps est la clé pour maintenir l'élan sans compromettre la qualité. Choisir consciemment où investir son temps devient un acte stratégique.
+El tiempo desempeña un papel crucial en este debate. La eficiencia temporal, destacada por la perspectiva de la rapidez, se convierte en una habilidad esencial. Gestionar bien el tiempo es la clave para mantener el impulso sin comprometer la calidad. Elegir conscientemente dónde invertir tu tiempo se convierte en un acto estratégico.
 
-### Contrôle total vs. flexibilité : naviguer entre les deux extrêmes
+### Control total frente a flexibilidad: navegar entre dos extremos
 
-Contrôler entièrement le processus de création offre un sentiment d'autonomie et d'empowerment. Cependant, il est vital de ne pas confondre contrôle avec rigidité. Être ouvert aux évolutions du marché et aux nouvelles tendances est tout aussi essentiel que le contrôle personnel. C'est un équilibre délicat entre autonomie et adaptabilité.
+Controlar por completo el proceso de creación ofrece una sensación de autonomía y empoderamiento. Sin embargo, es vital no confundir control con rigidez. Estar abierto a la evolución del mercado y a las nuevas tendencias es tan importante como mantener el control personal. Es un equilibrio delicado entre autonomía y adaptabilidad.
 
-### L'équilibre délicat : un voyage continu de découverte et d'adaptation
+### El equilibrio delicado: un viaje continuo de descubrimiento y adaptación
 
-En fin de compte, la création du portfolio est un voyage continu. C'est naviguer dans ce paradoxe avec intention. C'est trouver un équilibre entre la quête de l'excellence et la nécessité d'agir rapidement, sachant que chaque itération est une progression vers une version améliorée de soi-même. Créer un portfolio, c'est embrasser le paradoxe, c'est choisir consciemment entre perfection et rapidité, et c'est accepter que le chemin vers l'excellence est un voyage plutôt qu'une destination.
+En última instancia, crear un portafolio es un viaje continuo. Consiste en navegar por esta paradoja con intención. Consiste en encontrar un equilibrio entre buscar la excelencia y la necesidad de actuar rápido, sabiendo que cada iteración es un paso hacia una versión mejorada de ti mismo. Crear un portafolio es aceptar la paradoja, elegir conscientemente entre perfección y rapidez, y aceptar que el camino hacia la excelencia es un viaje, no un destino.

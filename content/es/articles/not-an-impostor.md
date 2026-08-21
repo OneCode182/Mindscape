@@ -1,30 +1,30 @@
 ---
-title: Tu n'es pas un imposteur
+title: No eres un impostor
 date: 11/01/2024
-description: "Dans le théâtre de la création de contenu, nombreux sont ceux qui,
-  en coulisses, murmurent une phrase teintée de doute : 'Je ne suis pas
-  légitime, les autres sont tellement meilleurs'. Cette mélodie d'insécurité,
-  souvent jouée en boucle dans l'esprit des créateurs émergents, est le premier
-  acte d'une œuvre bien plus vaste : la conquête de sa propre légitimité."
+description: "En el teatro de la creación de contenido, muchos susurran entre
+  bastidores una frase teñida de duda: 'No soy legítimo, los demás son mucho
+  mejores'. Esta melodía de inseguridad, que suele repetirse en la mente de los
+  creadores emergentes, es el primer acto de una obra mucho más grande: la
+  conquista de la propia legitimidad."
 tags:
-  - Création
-  - Productivité
+  - Creación
+  - Productividad
 image: https://canvas.hrcd.fr/articles/trap-of-perfection.jpg
 readingTime: "3"
 ---
 
 ![preview](/articles/trap-of-perfection.jpg)
 
-Dans le théâtre de la création de contenu, nombreux sont ceux qui, en coulisses, murmurent une phrase teintée de doute : "Je ne suis pas légitime, les autres sont tellement meilleurs". Cette mélodie d'insécurité, souvent jouée en boucle dans l'esprit des créateurs émergents, est le premier acte d'une œuvre bien plus vaste : la conquête de sa propre légitimité.
+En el teatro de la creación de contenido, muchos susurran entre bastidores una frase teñida de duda: "No soy legítimo, los demás son mucho mejores". Esta melodía de inseguridad, que suele repetirse en la mente de los creadores emergentes, es el primer acto de una obra mucho más grande: la conquista de la propia legitimidad.
 
-Imaginez-vous debout, au bord de la scène, ébloui par les projecteurs de l'auto-jugement. Chaque créateur passe par là. Mais au lieu de vous enfoncer dans l'ombre de l'autodénigrement, prenez un moment pour écouter les murmures du public : les autres créateurs. Ce que vous entendez n'est pas une cacophonie de critiques, mais un chœur d'expériences et de leçons.
+Imagínate de pie al borde del escenario, deslumbrado por los focos del autojuicio. Todo creador pasa por ahí. Pero, en lugar de hundirte en la sombra de la autocrítica, tómate un momento para escuchar los murmullos del público: los demás creadores. Lo que oyes no es una cacofonía de críticas, sino un coro de experiencias y aprendizajes.
 
-C'est ici que la magie opère. Au lieu de voir la scène comme un lieu de compétition, transformez-la en un espace d'apprentissage. Laissez les succès des autres vous inspirer, leurs erreurs vous enseigner. Ce n'est pas de l'imitation, mais une harmonie créative où vous pouvez trouver votre propre rythme, votre propre mélodie.
+Aquí es donde ocurre la magia. En lugar de ver el escenario como un lugar de competición, conviértelo en un espacio de aprendizaje. Deja que los éxitos de los demás te inspiren y que sus errores te enseñen. No se trata de imitar, sino de encontrar tu propio ritmo y tu propia melodía dentro de una armonía creativa.
 
-Votre authenticité est votre instrument le plus précieux. Jouez-la avec confiance. Chaque note de votre expérience, de votre perspective, résonne d'une façon unique auprès de votre public. L'authenticité est le véritable opus d'un créateur, bien plus captivant que la quête épuisante de la perfection.
+Tu autenticidad es tu instrumento más valioso. Tócala con confianza. Cada nota de tu experiencia y de tu perspectiva resuena de una forma única en tu público. La autenticidad es la verdadera obra de un creador, mucho más cautivadora que la agotadora búsqueda de la perfección.
 
-N'oubliez pas, chaque création est une répétition pour la suivante. Il n'y a pas de final grandiose où tout doit être parfait. C'est un concert en continu, où chaque performance est meilleure que la précédente.
+No lo olvides: cada creación es un ensayo para la siguiente. No existe un gran final en el que todo tenga que ser perfecto. Es un concierto continuo, donde cada actuación es mejor que la anterior.
 
-Et dans cette salle de spectacle, vous n'êtes pas seul. Les coulisses regorgent de mentors, de pairs, d'admirateurs. Ils sont là pour vous encourager, pour vous guider, pour applaudir vos réussites et vous soutenir dans vos doutes. Cette communauté est votre chœur de soutien, transformant les solos de peur en duos de courage.
+Y en esta sala de espectáculos no estás solo. Entre bastidores hay mentores, colegas y admiradores. Están ahí para animarte, guiarte, aplaudir tus logros y apoyarte en tus dudas. Esta comunidad es tu coro de apoyo, que transforma los solos de miedo en dúos de valentía.
 
-En fin de compte, chaque rideau levé, chaque lumière allumée est un pas de plus vers l'acceptation de votre propre talent. Le sentiment d'imposture se dissipe non pas quand on se compare aux autres, mais quand on reconnaît la beauté unique de sa propre performance. Dans cette salle, le succès n'est pas seulement mesuré par l'applaudissement à la fin, mais par le courage de monter sur scène et de dire : "Voici mon histoire, écoutez-la".
+En última instancia, cada telón que se levanta y cada luz que se enciende es un paso más hacia la aceptación de tu propio talento. El sentimiento de impostura no desaparece cuando te comparas con los demás, sino cuando reconoces la belleza única de tu propia actuación. En esta sala, el éxito no se mide solo por los aplausos al final, sino por el valor de subir al escenario y decir: "Esta es mi historia, escúchala".
