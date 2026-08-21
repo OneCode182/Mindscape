@@ -69,6 +69,7 @@
     <section class="relative overflow-hidden bg-[linear-gradient(to_bottom,#010101_0%,#080808_18rem)]">
       <!-- Shelve-inspired section bridge -->
       <div class="pointer-events-none absolute inset-x-0 top-0 h-56 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.12),transparent_72%)]" />
+      <div class="pointer-events-none absolute inset-x-0 top-0 z-10 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent shadow-[0_0_16px_rgba(255,255,255,0.12)]" />
       <DotPattern
         aria-hidden="true"
         class="pointer-events-none absolute inset-0 size-full fill-white/[0.055] [mask-image:linear-gradient(to_bottom,white_0%,white_78%,transparent_100%)]"
