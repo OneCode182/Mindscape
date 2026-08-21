@@ -12,6 +12,9 @@ Read `.agents/env.json`, resolve paths, then load only needed context:
 | Frontend structure/decision | [architecture/README.md](architecture/README.md) | `architecture/<topic>.md` |
 | Project skill | [skills/project/README.md](skills/project/README.md) | `skills/project/<name>/SKILL.md` |
 | Tool/language/framework skill | [skills/tech/README.md](skills/tech/README.md) | `skills/tech/<name>/SKILL.md` |
+| Branch comparison, PR audit, or PR description | [agents/pr-desc-creator.agent.md](agents/pr-desc-creator.agent.md) | Git evidence and Markdown output |
+| Create or update GitHub PR | [agents/pr-creator.agent.md](agents/pr-creator.agent.md) | Human-approved `gh` action |
+| Human-gated PR lifecycle | [workflows/github-pr-human-loop.workflow.md](workflows/github-pr-human-loop.workflow.md) | Paused evidence at each gate |
 | Task memory/resume | [tasks/README.md](tasks/README.md) | `tasks/<id>-<slug>.task.md` |
 
 ## Rules
@@ -22,10 +25,12 @@ Read `.agents/env.json`, resolve paths, then load only needed context:
 - Keep one concern per document. Split and link when navigation becomes slow.
 - Treat curriculum paths from `env.json` as external, read-only, task-scoped context.
 - Harness describes Mindscape; no TecniPass-specific backend, cloud, graph, or provider machinery.
+- PR agents may inspect Git and use `gh`, but GitHub mutations require explicit human approval.
+- PR agents must not merge, close, comment, rewrite history, or expose credentials.
 
 ## Traceability IDs
 
-`AGENT-*`, `ARCH-*`, `SKILL-*`, and `TASK-*`. Link related IDs and repository paths in frontmatter and task notes.
+`AGENT-*`, `ARCH-*`, `SKILL-*`, `TASK-*`, and `WORKFLOW-*`. Link related IDs and repository paths in frontmatter and task notes.
 
 ## Curriculum context
 

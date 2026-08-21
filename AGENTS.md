@@ -35,6 +35,9 @@ When sources conflict, stop and record the conflict in the active task.
 | New project skill | `.agents/skills/project/README.md` |
 | New technical skill | `.agents/skills/tech/README.md` |
 | New agent profile | `.agents/agents/README.md` |
+| Branch comparison, PR audit, or PR description | `.agents/agents/pr-desc-creator.agent.md` |
+| Create or update GitHub PR | `.agents/agents/pr-creator.agent.md` |
+| Human-gated PR lifecycle | `.agents/workflows/github-pr-human-loop.workflow.md` |
 | New, resumed, or completed task | `.agents/tasks/README.md` |
 | Curriculum/profile context | `.agents/env.json`; read external CV only when task-relevant |
 
@@ -43,5 +46,7 @@ When sources conflict, stop and record the conflict in the active task.
 - Keep changes inside requested scope; do not copy TecniPass harness internals wholesale.
 - Do not edit, commit, or publish files under `/home/onecode/Documents/curriculum/`.
 - Never place secrets in `.agents/env.json` or Markdown.
+- PR work must use Git evidence, `gh` CLI, and explicit human approval before push or PR mutation.
+- Never merge, close, comment, force-push, or rewrite history through PR agents.
 - Use templates, stable IDs, references, validation evidence, and concise English docs.
 - Run proportionate checks; report skipped checks and residual risks.

@@ -18,7 +18,8 @@ Body: scope, inputs, workflow, output contract, boundaries, verification, tracea
 
 | ID | File | Domain | Trigger |
 |---|---|---|---|
-| — | — | No project-specific profiles yet | Add from template |
+| `AGENT-PR-DESC-CREATOR` | [pr-desc-creator.agent.md](pr-desc-creator.agent.md) | Git evidence, branch audit, PR description | Compare/audit branch or write PR body |
+| `AGENT-PR-CREATOR` | [pr-creator.agent.md](pr-creator.agent.md) | Full GitHub PR lifecycle | Create or update PR with `gh` |
 
 ## Boundaries
 

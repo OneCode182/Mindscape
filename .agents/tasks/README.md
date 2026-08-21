@@ -17,7 +17,8 @@ Concise, durable records for meaningful work. Task files are the resume/audit so
 
 | ID | File | Status | Scope |
 |---|---|---|---|
-| TASK-HARNESS-BOOTSTRAP | [harness-bootstrap.task.md](harness-bootstrap.task.md) | in-progress | Initial harness creation |
+| TASK-HARNESS-BOOTSTRAP | [harness-bootstrap.task.md](harness-bootstrap.task.md) | done | Initial harness creation |
+| TASK-PR-HARNESS-BOOTSTRAP | [pr-harness-bootstrap.task.md](pr-harness-bootstrap.task.md) | done | PR agents, Git audit, and GitHub CLI flow |
 
 ## Resume rule
 
