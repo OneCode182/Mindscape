@@ -11,12 +11,9 @@ export default defineAppConfig({
 		picture: '/profile/selfie.jpg',
 	},
 	socials: {
-		github: 'https://github.com/HugoRCD',
-		twitter: 'https://twitter.com/HugoRCD__',
-		linkedin: 'https://www.linkedin.com/in/hugo-richard-0801',
-		instagram: 'https://www.instagram.com/hugo.rcd_',
-		spotify:
-			'https://open.spotify.com/user/yuvl0zpp3bpx4hne1ag7huten?si=df7ee2777c0c4fc4',
+		github: 'https://github.com/OneCode182',
+		linkedin: 'https://linkedin.com/in/SergioSilvaR1',
+		hackerrank: 'https://www.hackerrank.com/profile/onecode0182',
 	},
 	seo: {
 		title: 'Canvas a Nuxt portfolio template',
