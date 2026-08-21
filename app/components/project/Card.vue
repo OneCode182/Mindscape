@@ -7,7 +7,7 @@ defineProps<{
 		link: string;
 	};
 }>();
-const _img = useImage();
+const img = useImage();
 </script>
 
 <template>

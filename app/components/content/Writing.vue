@@ -3,7 +3,7 @@ import type { Collections } from '@nuxt/content';
 
 const searchedTags = ref<string[]>([]);
 const searchedTitle = ref('');
-const _showSearch = ref(false);
+const showSearch = ref(false);
 
 const { locale } = useI18n();
 
@@ -23,11 +23,11 @@ const { data: articles } = await useAsyncData(
 if (!articles.value)
 	throw createError({ statusCode: 404, statusMessage: 'Page not found' });
 
-const _tags = computed(() =>
+const tags = computed(() =>
 	Array.from(new Set(articles.value?.flatMap((article) => article.tags))),
 );
 
-const _filteredArticles = computed(
+const filteredArticles = computed(
 	() =>
 		articles.value?.filter(
 			(article) =>
@@ -40,7 +40,7 @@ const _filteredArticles = computed(
 		) ?? [],
 );
 
-const _toggleTag = (tag: string) => {
+const toggleTag = (tag: string) => {
 	searchedTags.value = searchedTags.value.includes(tag)
 		? searchedTags.value.filter((t) => t !== tag)
 		: [...searchedTags.value, tag];

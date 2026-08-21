@@ -21,7 +21,7 @@ const index = computed(() => {
 });
 
 // active item indicator
-const _isActive = computed(() => {
+const isActive = computed(() => {
 	return context.activeItem.index === index.value;
 });
 

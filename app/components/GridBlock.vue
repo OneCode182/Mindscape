@@ -10,7 +10,7 @@ defineProps({
 	},
 });
 
-const _grid = inject('grid-context');
+const grid = inject('grid-context');
 </script>
 
 <template>
