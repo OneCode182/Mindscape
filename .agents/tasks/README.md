@@ -22,6 +22,7 @@ Concise, durable records for meaningful work. Task files are the resume/audit so
 | TASK-HOME-WORK-EXPERIENCE | [home-work-experience.task.md](home-work-experience.task.md) | done | CV-based work experience above home projects |
 | TASK-HOME-HERO-REFRESH | [home-hero-refresh.task.md](home-hero-refresh.task.md) | done | Shelve-inspired black hero with left copy and right portrait |
 | TASK-TEXT-SCRAMBLE-HOVER | [text-scramble-hover.task.md](text-scramble-hover.task.md) | done | Shelve-style hover scramble for portfolio headings |
+| TASK-CV-PROJECTS | [cv-projects.task.md](cv-projects.task.md) | done | CV projects before experience with hover details |
 
 ## Resume rule
 
