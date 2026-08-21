@@ -24,10 +24,12 @@
               data-animate
             >
               <h1 class="max-w-2xl text-pretty bg-gradient-to-b from-white/95 to-white/45 bg-clip-text text-left text-4xl font-medium leading-[1.05] tracking-tight text-transparent sm:text-5xl lg:text-7xl">
-                <slot
-                  name="hero_title"
-                  mdc-unwrap="p"
-                />
+                <ScrambleText>
+                  <slot
+                    name="hero_title"
+                    mdc-unwrap="p"
+                  />
+                </ScrambleText>
               </h1>
 
               <!-- subtitle -->

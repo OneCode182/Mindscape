@@ -21,7 +21,7 @@ const { data: projects } = await useAsyncData(
 <template>
   <div class="flex w-full flex-col gap-6">
     <h3 class="font-newsreader italic text-white-shadow text-xl">
-      {{ $t("navigation.works") }}
+      <ScrambleText :label="$t('navigation.works')" />
     </h3>
     <div class="flex w-full flex-col gap-4">
       <NuxtLink
@@ -44,7 +44,7 @@ const { data: projects } = await useAsyncData(
     </div>
     <NuxtLinkLocale to="/works">
       <span class="font-newsreader italic text-white-shadow cursor-pointer">
-        {{ $t("global.see_more") }}
+        <ScrambleText :label="$t('global.see_more')" />
       </span>
     </NuxtLinkLocale>
   </div>
