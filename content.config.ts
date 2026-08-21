@@ -127,11 +127,16 @@ const commonArticleSchema = z.object({
 
 const commonProjectSchema = z.object({
 	name: z.string().nonempty(),
-	image: z.string().url(),
+	image: z.string().nonempty().optional(),
 	link: z.string().url(),
 	release: z.string().nonempty(),
-	date: z.string().nonempty(),
+	date: z.string().nonempty().optional(),
 	featured: z.boolean().optional(),
+	organization: z.string().nonempty().optional(),
+	type: z.string().nonempty().optional(),
+	summary: z.string().nonempty().optional(),
+	details: z.array(z.string().nonempty()).optional(),
+	technologies: z.array(z.string().nonempty()).optional(),
 });
 
 const commonFaqSchema = z.object({

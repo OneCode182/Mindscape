@@ -83,14 +83,14 @@
           data-animate
           class="z-20 flex w-full max-w-3xl flex-col gap-4 self-center"
         >
+          <!-- projects -->
+          <HomeProjects />
+
           <!-- work experience -->
           <slot
             name="experiences"
             mdc-unwrap="p"
           />
-
-          <!-- projects -->
-          <HomeProjects />
         </div>
 
         <Divider class="my-9" />

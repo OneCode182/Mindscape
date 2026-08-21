@@ -4,7 +4,7 @@ import type { Collections } from '@nuxt/content';
 const { locale } = useI18n();
 
 const { data: projects } = await useAsyncData(
-	'projects',
+	`projects-${locale.value}`,
 	async () => {
 		const collection = `projects_${locale.value}` as keyof Collections;
 		return (await queryCollection(collection).all()) as
