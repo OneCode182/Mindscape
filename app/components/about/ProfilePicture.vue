@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const { profile } = useAppConfig();
-void profile;
 </script>
 
 <template>

@@ -15,7 +15,6 @@ const { data: projects } = await useAsyncData(
 		watch: [locale],
 	},
 );
-void projects;
 </script>
 
 <template>

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useId } from 'vue';
+
 const props = defineProps({
 	size: {
 		type: Number,
@@ -14,7 +16,7 @@ const props = defineProps({
 	},
 });
 
-const _id = Math.round(Math.random() * 999);
+const id = useId();
 
 provide('grid-context', props);
 </script>

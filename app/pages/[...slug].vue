@@ -4,7 +4,6 @@ import { joinURL, withLeadingSlash } from 'ufo';
 
 const route = useRoute();
 const { locale, localeProperties, t } = useI18n();
-void localeProperties;
 
 const slug = computed(() =>
 	Array.isArray(route.params.slug)

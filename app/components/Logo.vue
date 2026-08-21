@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const { appName } = useAppConfig();
-void appName;
 
 defineProps({
 	isText: {

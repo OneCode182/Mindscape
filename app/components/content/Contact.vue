@@ -4,9 +4,8 @@ import type { FormSubmitEvent } from '#ui/types';
 
 const { profile } = useAppConfig();
 const { t } = useI18n();
-void profile;
 
-const _isResendEnabled = useRuntimeConfig().public.resend;
+const isResendEnabled = useRuntimeConfig().public.resend;
 
 const state = ref({
 	email: '',
@@ -26,7 +25,7 @@ type Schema = z.output<typeof schema>;
 
 const loading = ref(false);
 
-async function _onSubmit(event: FormSubmitEvent<Schema>) {
+async function onSubmit(event: FormSubmitEvent<Schema>) {
 	loading.value = true;
 	try {
 		await $fetch('/api/emails/send', {

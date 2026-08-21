@@ -4,7 +4,6 @@ import { joinURL, withLeadingSlash } from 'ufo';
 
 const route = useRoute();
 const { locale, t, localeProperties } = useI18n();
-void localeProperties;
 
 const slug = computed(() =>
 	Array.isArray(route.params.slug)
@@ -31,7 +30,7 @@ if (!page.value)
 
 const { copy } = useClipboard();
 
-function _copyArticleLink() {
+function copyArticleLink() {
 	copy(`${window.location.origin}${route.fullPath}`);
 	toast.success(t('global.article_link_copied'));
 }
