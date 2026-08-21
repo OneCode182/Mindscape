@@ -3,19 +3,16 @@ const { profile } = useAppConfig();
 </script>
 
 <template>
-  <div class="z-10 flex items-center justify-center">
-    <SpotlightButton rounded>
-      <div
-        class="font-mona relative flex items-center justify-center gap-2 bg-gradient-to-b from-white/25 to-white bg-clip-text text-lg font-medium text-transparent transition-all duration-200"
-      >
-        <ProseImg
-          width="96"
-          :src="profile.picture!"
-          class="size-24 rounded-full border-2 border-neutral-800/30 object-cover"
-          alt="Hugo Richard Profile Picture"
-          aria-label="Hugo Richard Profile Picture"
-        />
-      </div>
-    </SpotlightButton>
+  <div class="z-10 flex items-center justify-center lg:justify-end">
+    <div class="group relative">
+      <div class="absolute -inset-8 rounded-full bg-white/10 blur-3xl transition duration-500 group-hover:bg-white/20" />
+      <ProseImg
+        width="384"
+        :src="profile.picture!"
+        class="relative size-64 rounded-3xl border border-white/15 object-cover grayscale transition duration-500 group-hover:grayscale-0 sm:size-80 lg:size-[26rem]"
+        :alt="`${profile.name} profile picture`"
+        :aria-label="`${profile.name} profile picture`"
+      />
+    </div>
   </div>
 </template>

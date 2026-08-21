@@ -22,7 +22,7 @@
 }
 
 html.dark {
-	--ui-bg: var(--color-neutral-950);
+	--ui-bg: #010101;
 	--bg-secondary: #282828;
 	--bg-card: #282828;
 	--bg-card-hover: #343434;
