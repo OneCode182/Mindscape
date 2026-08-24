@@ -1,47 +1,61 @@
 <script setup lang="ts">
-import type { Collections } from '@nuxt/content'
+import type { Collections } from '@nuxt/content';
 
-const searchedTags = ref<string[]>([])
-const searchedTitle = ref('')
-const showSearch = ref(false)
+const searchedTags = ref<string[]>([]);
+const searchedTitle = ref('');
+const showSearch = ref(false);
 
-const { locale } = useI18n()
+const { locale } = useI18n();
 
-const { data: articles } = await useAsyncData('articles-' + locale.value, async () => {
-  const collection = ('articles_' + locale.value) as keyof Collections
-  return await queryCollection(collection).all() as Collections['articles_en'][] | Collections['articles_fr'][]
-}, {
-  watch: [locale],
-})
+const { data: articles } = await useAsyncData(
+	`articles-${locale.value}`,
+	async () => {
+		const collection = `articles_${locale.value}` as keyof Collections;
+		return (await queryCollection(collection).all()) as
+			| Collections['articles_en'][]
+			| Collections['articles_es'][];
+	},
+	{
+		watch: [locale],
+	},
+);
 
 if (!articles.value)
-  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
+	throw createError({ statusCode: 404, statusMessage: 'Page not found' });
 
 const tags = computed(() =>
-  Array.from(new Set(articles.value?.flatMap(article => article.tags))),
-)
+	Array.from(new Set(articles.value?.flatMap((article) => article.tags))),
+);
 
-const filteredArticles = computed(() =>
-  articles.value?.filter(article =>
-    (searchedTags.value.length === 0 || searchedTags.value.some(tag => article.tags.includes(tag)))
-    && (searchedTitle.value === '' || article.title!.toLowerCase().includes(searchedTitle.value.toLowerCase())),
-  ) ?? [],
-)
+const filteredArticles = computed(
+	() =>
+		articles.value?.filter(
+			(article) =>
+				(searchedTags.value.length === 0 ||
+					searchedTags.value.some((tag) => article.tags.includes(tag))) &&
+				(searchedTitle.value === '' ||
+					article.title
+						?.toLowerCase()
+						.includes(searchedTitle.value.toLowerCase())),
+		) ?? [],
+);
 
 const toggleTag = (tag: string) => {
-  searchedTags.value = searchedTags.value.includes(tag)
-    ? searchedTags.value.filter(t => t !== tag)
-    : [...searchedTags.value, tag]
-}
+	searchedTags.value = searchedTags.value.includes(tag)
+		? searchedTags.value.filter((t) => t !== tag)
+		: [...searchedTags.value, tag];
+};
 </script>
 
 <template>
   <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20">
     <h1 class="font-newsreader italic text-white-shadow text-center text-4xl">
-      <slot
-        name="title"
-        mdc-unwrap="p"
-      />
+      <ScrambleText>
+        <slot
+          name="title"
+          mdc-unwrap="p"
+        />
+      </ScrambleText>
     </h1>
     <h2 class="text-center text-lg font-extralight italic text-muted">
       <slot

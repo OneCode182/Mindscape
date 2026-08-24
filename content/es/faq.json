@@ -1,0 +1,53 @@
+{
+	"title": "FAQ",
+	"subtitle": "Preguntas que me hacen a menudo",
+	"faqQuestions": [
+		{
+			"title": "Services",
+			"questions": [
+				{
+					"label": "¿Qué servicios ofrezco?",
+					"content": "Ofrezco principalmente servicios de desarrollo web y móvil, además de diseño y consultoría web. Mi objetivo es ayudarte a crear productos de calidad que respondan a tus necesidades y a las de tus usuarios."
+				},
+				{
+					"label": "¿Puedes ayudarme a aprender a crear un sitio web?",
+					"content": "Por el momento no ofrezco cursos, pero puedo recomendarte recursos y consejos para orientarte en tu aprendizaje."
+				}
+			]
+		},
+		{
+			"title": "Precios",
+			"questions": [
+				{
+					"label": "¿Cuánto cuesta un proyecto?",
+					"content": "El coste de un proyecto depende de muchos factores, como su tamaño, las funcionalidades, el tiempo de desarrollo, etc. El precio inicial de mis servicios web es de 2000 €, con una media de entre 3000 € y 10000 €. Para otros servicios de diseño o consultoría, normalmente cobro 450 € al día."
+				},
+				{
+					"label": "¿Cómo funciona el pago de un proyecto?",
+					"content": "Solicito un anticipo del 40 % antes de comenzar un proyecto y el 60 % restante después de una entrega satisfactoria. Acepto pagos por transferencia bancaria, PayPal, etc."
+				},
+				{
+					"label": "¿Cuánto dura un proyecto?",
+					"content": "Es difícil dar una estimación precisa, porque cada proyecto es diferente, pero la mayoría de mis trabajos anteriores han tardado entre 2 semanas y 2 meses."
+				},
+				{
+					"label": "¿Ofrezco descuentos?",
+					"content": "Ofrezco un descuento del 15 % para estudiantes y organizaciones sin ánimo de lucro."
+				}
+			]
+		},
+		{
+			"title": "Personal",
+			"questions": [
+				{
+					"label": "¿Qué es lo que más te gusta de este trabajo?",
+					"content": "Me encanta aprender cosas nuevas y poder crear prácticamente cualquier cosa desde cero: crear cosas bonitas que la gente use y disfrute."
+				},
+				{
+					"label": "¿Tienes pasiones fuera del trabajo?",
+					"content": "Me encanta lo que hago, así que normalmente paso mucho tiempo trabajando en proyectos personales, haciendo fotografía, etc. También soy un gran aficionado al deporte. Suelo ir al gimnasio y hace poco empecé a practicar escalada."
+				}
+			]
+		}
+	]
+}

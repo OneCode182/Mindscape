@@ -1,14 +1,16 @@
 <script setup lang="ts">
-const stack = await queryCollection('stack').first()
+const stack = await queryCollection('stack').first();
 </script>
 
 <template>
   <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20 text-[var(--ui-text-toned)]">
     <h1 class="font-newsreader italic text-white-shadow text-center text-4xl">
-      <slot
-        name="title"
-        mdc-unwrap="p"
-      />
+      <ScrambleText>
+        <slot
+          name="title"
+          mdc-unwrap="p"
+        />
+      </ScrambleText>
     </h1>
     <h2 class="text-center text-lg font-extralight italic text-muted">
       <slot
@@ -21,7 +23,7 @@ const stack = await queryCollection('stack').first()
       <AboutProfilePicture />
       <div class="relative flex flex-col gap-3 sm:ml-4">
         <h3 class="text-lg">
-          Intro
+          <ScrambleText label="Intro" />
         </h3>
         <div class="flex flex-col gap-4 text-primary">
           <slot
@@ -42,10 +44,12 @@ const stack = await queryCollection('stack').first()
     <div class="flex flex-col gap-3">
       <div class="mb-6 flex flex-col gap-1">
         <h3 class="text-white-shadow font-newsreader italic text-3xl">
-          <slot
-            name="stack_title"
-            mdc-unwrap="p"
-          />
+          <ScrambleText>
+            <slot
+              name="stack_title"
+              mdc-unwrap="p"
+            />
+          </ScrambleText>
         </h3>
         <p>
           <slot

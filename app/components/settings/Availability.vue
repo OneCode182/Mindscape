@@ -1,31 +1,31 @@
 <script setup lang="ts">
-const appConfig = useAppConfig().global
+const appConfig = useAppConfig().global;
 
 const currentAvailability = computed(() => {
-  return [
-    {
-      status: 'available',
-      message: 'Available for hire',
-      color: 'bg-green-600/80',
-      bgColor: 'bg-green-500/80',
-      textColor: 'text-green-500/80',
-    },
-    {
-      status: 'unavailable',
-      message: 'Not available for hire',
-      color: 'bg-red-500',
-      bgColor: 'bg-red-400',
-      textColor: 'text-red-400',
-    },
-  ][appConfig.available ? 0 : 1]
-})
+	return [
+		{
+			status: 'available',
+			message: 'Available for hire',
+			color: 'bg-green-600/80',
+			bgColor: 'bg-green-500/80',
+			textColor: 'text-green-500/80',
+		},
+		{
+			status: 'unavailable',
+			message: 'Not available for hire',
+			color: 'bg-red-500',
+			bgColor: 'bg-red-400',
+			textColor: 'text-red-400',
+		},
+	][appConfig.available ? 0 : 1];
+});
 
 defineProps({
-  background: {
-    type: Boolean,
-    default: false,
-  },
-})
+	background: {
+		type: Boolean,
+		default: false,
+	},
+});
 </script>
 
 <template>

@@ -1,0 +1,24 @@
+{
+	"name": "Serverless Social Network — AREP Twitter",
+	"link": "https://github.com/OneCode182/AREP-Microservices",
+	"release": "April 2026",
+	"featured": true,
+	"organization": "Escuela Colombiana de Ingeniería",
+	"type": "Academic project",
+	"summary": "A Twitter-like social network built with a cloud-native serverless architecture.",
+	"details": [
+		"Built the application with Java, Spring Boot, React and OAuth2 authentication.",
+		"Provisioned AWS Lambda microservices with Infrastructure as Code, connected through API Gateway and DynamoDB, with the frontend hosted on S3."
+	],
+	"technologies": [
+		"Java",
+		"Spring Boot",
+		"React",
+		"OAuth2",
+		"AWS Lambda",
+		"API Gateway",
+		"DynamoDB",
+		"S3",
+		"IaC"
+	]
+}

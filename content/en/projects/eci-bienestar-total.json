@@ -1,0 +1,25 @@
+{
+	"name": "Reservations Microservice — ECI Bienestar Total",
+	"link": "https://github.com/OneCode182/CVDS-MOD-2/tree/dev",
+	"release": "May 2025",
+	"featured": true,
+	"organization": "Escuela Colombiana de Ingeniería",
+	"type": "Academic project",
+	"summary": "A reservation, loan and inventory module integrated into a student-built microservices platform.",
+	"details": [
+		"Developed the module with a team of five as part of an architecture built by nearly 30 students.",
+		"Implemented the Java and Spring Boot backend with MongoDB and Swagger, deployed on an Azure VM and integrated through an AWS API Gateway.",
+		"Automated CI/CD, added JUnit tests and verified 80% coverage with SonarQube."
+	],
+	"technologies": [
+		"Java",
+		"Spring Boot",
+		"MongoDB",
+		"Swagger",
+		"Azure",
+		"AWS API Gateway",
+		"CI/CD",
+		"JUnit",
+		"SonarQube"
+	]
+}

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t } = useI18n();
 </script>
 
 <template>
@@ -16,7 +16,7 @@ const { t } = useI18n()
           >
             {{ t("global.contact") }}
             <UIcon
-              name="heroicons-envelope"
+              name="heroicons:envelope"
               class="size-5 text-white/80"
             />
           </NuxtLinkLocale>

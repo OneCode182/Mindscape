@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { profile } = useAppConfig()
+const { profile } = useAppConfig();
 </script>
 
 <template>

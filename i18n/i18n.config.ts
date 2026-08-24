@@ -1,7 +1,7 @@
-import messages from './locales/messages'
+import messages from './locales/messages';
 
 export default defineI18nConfig(() => ({
-  legacy: false,
-  locale: 'en',
-  messages: messages,
-}))
+	legacy: false,
+	locale: 'es',
+	messages: messages,
+}));

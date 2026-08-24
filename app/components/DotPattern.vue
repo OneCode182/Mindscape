@@ -1,29 +1,33 @@
 <script setup lang="ts">
+import { useId } from 'vue';
+
+const id = useId();
+
 defineProps({
-  size: {
-    type: Number,
-    default: 16,
-  },
-  radius: {
-    type: Number,
-    default: 1,
-  },
-  offsetX: {
-    type: Number,
-    default: 0,
-  },
-  offsetY: {
-    type: Number,
-    default: 0,
-  },
-})
+	size: {
+		type: Number,
+		default: 16,
+	},
+	radius: {
+		type: Number,
+		default: 1,
+	},
+	offsetX: {
+		type: Number,
+		default: 0,
+	},
+	offsetY: {
+		type: Number,
+		default: 0,
+	},
+});
 </script>
 
 <template>
   <svg>
     <defs>
       <pattern
-        id="dot-pattern"
+        :id="`dot-pattern-${id}`"
         :width="size"
         :height="size"
         patternUnits="userSpaceOnUse"
@@ -43,7 +47,7 @@ defineProps({
       width="100%"
       height="100%"
       stroke-width="0"
-      fill="url(#dot-pattern)"
+      :fill="`url(#dot-pattern-${id})`"
     />
   </svg>
 </template>

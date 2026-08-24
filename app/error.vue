@@ -1,18 +1,18 @@
 <script setup lang="ts">
 defineProps({
-  error: {
-    type: Object,
-    required: true,
-  },
-})
+	error: {
+		type: Object,
+		required: true,
+	},
+});
 
 function handleError() {
-  clearError({ redirect: '/' })
+	clearError({ redirect: '/' });
 }
 
 function goBack() {
-  clearError()
-  useRouter().back()
+	clearError();
+	useRouter().back();
 }
 </script>
 

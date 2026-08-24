@@ -1,10 +1,10 @@
 <script setup lang="ts">
 defineProps({
-  isText: {
-    type: Boolean,
-    default: false,
-  },
-})
+	isText: {
+		type: Boolean,
+		default: false,
+	},
+});
 </script>
 
 <template>

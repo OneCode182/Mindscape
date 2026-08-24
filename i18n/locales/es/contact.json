@@ -1,0 +1,20 @@
+{
+	"title": "Contáctame",
+	"description": "¡Hablemos de tu idea, proyecto o cualquier otra cosa!",
+	"fullname": "Nombre completo",
+	"email": "Email",
+	"phone": "Teléfono",
+	"subject": "Asunto de tu mensaje",
+	"message": "Mensaje",
+	"submit": "Enviar",
+	"disabled": "Debes configurar tu clave de API de Resend",
+	"success": "Tu mensaje se ha enviado correctamente",
+	"error": "Vaya, se produjo un error al enviar tu mensaje :(",
+	"budget": "Budget",
+	"subject_types": {
+		"project": "Hablar de un proyecto",
+		"bug": "Informar de un error",
+		"question": "Hacer una pregunta",
+		"other": "Otro"
+	}
+}

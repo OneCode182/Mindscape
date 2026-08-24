@@ -1,41 +1,53 @@
 <script lang="ts" setup>
-import type { Collections } from '@nuxt/content'
-import { withLeadingSlash, joinURL } from 'ufo'
+import type { Collections } from '@nuxt/content';
+import { joinURL, withLeadingSlash } from 'ufo';
 
-const route = useRoute()
-const { locale, t, localeProperties } = useI18n()
+const route = useRoute();
+const { locale, t, localeProperties } = useI18n();
 
-const slug = computed(() => Array.isArray(route.params.slug) ? route.params.slug as string[] : [route.params.slug as string])
-const path = computed(() => withLeadingSlash(joinURL(locale.value, 'articles', ...slug.value)))
-const collection = computed(() => `articles_${locale.value}` as keyof Collections)
+const slug = computed(() =>
+	Array.isArray(route.params.slug)
+		? (route.params.slug as string[])
+		: [route.params.slug as string],
+);
+const path = computed(() =>
+	withLeadingSlash(joinURL(locale.value, 'articles', ...slug.value)),
+);
+const collection = computed(
+	() => `articles_${locale.value}` as keyof Collections,
+);
 
-const { data: page } = await useAsyncData(path.value, async () =>
-  await queryCollection(collection.value).path(path.value).first() as Collections['articles_en'] | Collections['articles_fr'],
-)
+const { data: page } = await useAsyncData(
+	path.value,
+	async () =>
+		(await queryCollection(collection.value).path(path.value).first()) as
+			| Collections['articles_en']
+			| Collections['articles_es'],
+);
 
 if (!page.value)
-  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
+	throw createError({ statusCode: 404, statusMessage: 'Page not found' });
 
-const { copy } = useClipboard()
+const { copy } = useClipboard();
 
 function copyArticleLink() {
-  copy(`${window.location.origin}${route.fullPath}`)
-  toast.success(t('global.article_link_copied'))
+	copy(`${window.location.origin}${route.fullPath}`);
+	toast.success(t('global.article_link_copied'));
 }
 
 defineShortcuts({
-  meta_k: {
-    usingInput: true,
-    handler: () => {
-      copy(`${window.location.origin}${route.fullPath}`)
-      toast.success(t('global.article_link_copied'))
-    },
-  },
-})
+	meta_k: {
+		usingInput: true,
+		handler: () => {
+			copy(`${window.location.origin}${route.fullPath}`);
+			toast.success(t('global.article_link_copied'));
+		},
+	},
+});
 
 defineOgImage({
-  url: page.value.image,
-})
+	url: page.value.image,
+});
 </script>
 
 <template>
@@ -49,7 +61,7 @@ defineOgImage({
       class="mx-auto my-8 flex cursor-pointer items-center gap-2 px-4 text-muted hover:text-primary transition-colors duration-200 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl"
     >
       <UIcon
-        name="lucide:arrow-left"
+        name="heroicons:arrow-left"
         class="size-4"
       />
       <span class="text-sm font-extralight">

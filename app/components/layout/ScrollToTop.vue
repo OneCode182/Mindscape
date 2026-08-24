@@ -1,17 +1,17 @@
 <script setup lang="ts">
-const isScrolling = ref(false)
+const isScrolling = ref(false);
 
 onMounted(() => {
-  window.addEventListener('scroll', () => {
-    isScrolling.value = window.scrollY > 0
-  })
-})
+	window.addEventListener('scroll', () => {
+		isScrolling.value = window.scrollY > 0;
+	});
+});
 
 function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  })
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth',
+	});
 }
 </script>
 
@@ -25,7 +25,7 @@ function scrollToTop() {
       @click="scrollToTop"
     >
       <UIcon
-        name="heroicons-arrow-up"
+        name="heroicons:arrow-up"
         class="z-20 size-6"
       />
     </SpotlightButton>
