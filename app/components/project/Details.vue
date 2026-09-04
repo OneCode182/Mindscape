@@ -4,54 +4,79 @@ import type { Project } from '~/types/project';
 defineProps<{
 	project: Project;
 }>();
+
+const { t } = useI18n();
 </script>
 
 <template>
-  <div class="w-[min(90vw,24rem)] space-y-3 p-4">
-    <div>
-      <p class="font-semibold text-highlighted">
-        {{ project.name }}
-      </p>
-      <p
-        v-if="project.organization || project.type"
-        class="mt-1 text-xs text-muted"
-      >
-        <span v-if="project.organization">{{ project.organization }}</span>
-        <span v-if="project.organization && project.type"> · </span>
-        <span v-if="project.type">{{ project.type }}</span>
-      </p>
-    </div>
-
-    <p
+  <div class="space-y-9">
+    <section
       v-if="project.summary"
-      class="text-sm leading-6 text-primary"
+      aria-labelledby="project-summary"
     >
-      {{ project.summary }}
-    </p>
+      <h2
+        id="project-summary"
+        class="font-newsreader text-xl italic text-white-shadow"
+      >
+        {{ t("projects.summary") }}
+      </h2>
+      <p class="mt-3 text-base leading-8 text-primary/90">
+        {{ project.summary }}
+      </p>
+    </section>
 
-    <ul
+    <section
       v-if="project.details?.length"
-      class="list-disc space-y-2 pl-5 text-sm leading-6 text-primary"
+      aria-labelledby="project-details"
     >
-      <li
-        v-for="detail in project.details"
-        :key="detail"
+      <h2
+        id="project-details"
+        class="font-newsreader text-xl italic text-white-shadow"
       >
-        {{ detail }}
-      </li>
-    </ul>
+        {{ t("projects.highlights") }}
+      </h2>
+      <ul class="mt-3 list-disc space-y-3 pl-5 text-base leading-8 text-primary/90">
+        <li
+          v-for="detail in project.details"
+          :key="detail"
+        >
+          {{ detail }}
+        </li>
+      </ul>
+    </section>
 
-    <div
+    <section
       v-if="project.technologies?.length"
-      class="flex flex-wrap gap-1.5 pt-1"
+      aria-labelledby="project-technologies"
     >
-      <span
-        v-for="technology in project.technologies"
-        :key="technology"
-        class="rounded-full bg-blue-500/10 px-2 py-0.5 text-[11px] font-medium text-blue-200 ring-1 ring-inset ring-blue-400/25"
+      <h2
+        id="project-technologies"
+        class="font-newsreader text-xl italic text-white-shadow"
       >
-        {{ technology }}
-      </span>
-    </div>
+        {{ t("projects.technologies") }}
+      </h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span
+          v-for="technology in project.technologies"
+          :key="technology"
+          class="rounded-full bg-cyan-300/[0.08] px-3 py-1 text-xs font-medium text-cyan-100 ring-1 ring-inset ring-cyan-300/25"
+        >
+          {{ technology }}
+        </span>
+      </div>
+    </section>
+
+    <a
+      :href="project.link"
+      target="_blank"
+      rel="noreferrer noopener"
+      class="group inline-flex min-h-11 items-center gap-2 rounded-md border border-white/15 px-4 py-2 text-sm text-primary transition-colors hover:border-cyan-300/60 hover:text-cyan-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/80"
+    >
+      <span>{{ t("projects.visit") }}</span>
+      <UIcon
+        name="heroicons:arrow-up-right"
+        class="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+      />
+    </a>
   </div>
 </template>

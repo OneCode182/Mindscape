@@ -46,9 +46,9 @@ const ui = {
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center space-y-8 w-full sm:px-20 md:px-30">
+  <div class="flex w-full min-w-0 flex-col items-center justify-center space-y-8 px-4 sm:px-20 md:px-30">
     <div class="flex flex-col items-center justify-center gap-2">
-      <h3 class="font-newsreader italic text-white-shadow text-4xl">
+      <h3 class="font-newsreader text-[clamp(2rem,8vw,2.25rem)] italic text-white-shadow">
         <ScrambleText :label="faq!.title" />
       </h3>
       <p class="text-center text-sm font-medium text-muted">

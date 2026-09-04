@@ -1,5 +1,6 @@
 {
 	"name": "Microservicio de Reservas — ECI Bienestar Total",
+	"slug": "eci-bienestar-total",
 	"link": "https://github.com/OneCode182/CVDS-MOD-2/tree/dev",
 	"release": "Mayo 2025",
 	"featured": true,

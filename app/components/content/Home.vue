@@ -1,5 +1,5 @@
 <template>
-  <section class="relative sm:-mt-[50px]">
+  <section class="relative min-w-0 sm:-mt-[50px]">
     <!-- hero -->
     <section class="relative overflow-hidden bg-[#010101] pt-12">
       <!-- dots and soft light-to-dark background treatment -->
@@ -15,7 +15,7 @@
           class="absolute -right-20 top-0 size-72 rounded-full bg-white/20 blur-[120px] lg:-right-24 lg:top-4 lg:size-[32rem] lg:blur-[200px]"
         />
 
-        <div class="relative z-20 grid items-center gap-12 lg:min-h-[calc(100vh-8rem)] lg:grid-cols-[minmax(0,1.05fr)_minmax(20rem,0.95fr)] lg:gap-20">
+        <div class="relative z-20 grid min-h-dvh min-w-0 items-center gap-10 sm:gap-12 lg:min-h-[calc(100vh-8rem)] lg:grid-cols-[minmax(0,1.05fr)_minmax(20rem,0.95fr)] lg:gap-20">
           <div class="order-1 flex flex-col items-start justify-center text-left">
             <!-- title -->
             <div
@@ -23,7 +23,7 @@
               style="--stagger: 1; --delay: 10ms"
               data-animate
             >
-              <h1 class="max-w-2xl text-pretty bg-gradient-to-b from-white/95 to-white/45 bg-clip-text text-left text-4xl font-medium leading-[1.05] tracking-tight text-transparent sm:text-5xl lg:text-7xl">
+              <h1 class="max-w-2xl text-pretty bg-gradient-to-b from-white/95 to-white/45 bg-clip-text text-left text-[clamp(2.25rem,10vw,4.5rem)] font-medium leading-[1.05] tracking-tight text-transparent sm:text-5xl lg:text-7xl">
                 <ScrambleText>
                   <slot
                     name="hero_title"
@@ -33,7 +33,7 @@
               </h1>
 
               <!-- subtitle -->
-              <h2 class="mt-6 max-w-2xl text-left text-lg leading-8 antialiased text-white/60 sm:text-xl">
+              <h2 class="mt-6 max-w-2xl text-left text-base leading-7 antialiased text-white/60 sm:text-xl sm:leading-8">
                 <slot
                   name="hero_subtitle"
                   mdc-unwrap="p"
@@ -62,7 +62,9 @@
           </div>
 
           <!-- profile picture -->
-          <HomeProfilePicture class="order-2" />
+          <div class="order-2 min-w-0">
+            <HomeProfilePicture />
+          </div>
         </div>
       </div>
     </section>

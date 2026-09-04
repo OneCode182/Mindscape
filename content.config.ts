@@ -127,7 +127,9 @@ const commonArticleSchema = z.object({
 
 const commonProjectSchema = z.object({
 	name: z.string().nonempty(),
+	slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
 	image: z.string().nonempty().optional(),
+	imageFit: z.enum(['cover', 'contain']).optional(),
 	link: z.string().url(),
 	release: z.string().nonempty(),
 	date: z.string().nonempty().optional(),
@@ -173,7 +175,7 @@ export const collections = {
 			source: {
 				include: 'es/**/*.md',
 				exclude: ['es/articles/*.md'],
-				prefix: '/es',
+				prefix: '',
 			},
 			schema: commonContentSchema,
 		}),
@@ -193,7 +195,7 @@ export const collections = {
 			type: 'page',
 			source: {
 				include: 'es/articles/*.md',
-				prefix: '/es/articles',
+				prefix: '/articles',
 			},
 			schema: commonArticleSchema,
 		}),

@@ -9,6 +9,14 @@ export default defineNuxtConfig({
 		'@nuxt/image',
 		'@nuxt/scripts',
 		'vue-sonner/nuxt',
+		(_options, nuxt) => {
+			const publicDir = nuxt.options.dir.public;
+			const publicAssets = nuxt.options.nitro.publicAssets ?? [];
+
+			if (!publicAssets.some((asset) => asset.dir === publicDir)) {
+				nuxt.options.nitro.publicAssets = [{ dir: publicDir }, ...publicAssets];
+			}
+		},
 	],
 
 	imports: {
@@ -61,8 +69,8 @@ export default defineNuxtConfig({
 	},
 
 	routeRules: {
-		// Needed to activate preview on Nuxt Studio
-		'/': { prerender: false },
+		// Keep Studio preview dynamic in dev; emit the default locale root in production.
+		'/': { prerender: process.env.NODE_ENV === 'production' },
 	},
 
 	experimental: {
@@ -78,7 +86,7 @@ export default defineNuxtConfig({
 		prerender: {
 			autoSubfolderIndex: false,
 			crawlLinks: true,
-			routes: ['/es', '/en'],
+			routes: ['/', '/en'],
 		},
 	},
 
@@ -105,7 +113,7 @@ export default defineNuxtConfig({
 			fallbackLocale: 'es',
 			redirectOn: 'root',
 		},
-		strategy: 'prefix',
+		strategy: 'prefix_except_default',
 		defaultLocale: 'es',
 	},
 
@@ -126,6 +134,7 @@ export default defineNuxtConfig({
 				'heroicons:arrow-left',
 				'heroicons:arrow-path',
 				'heroicons:arrow-right',
+				'heroicons:arrow-up-right',
 				'heroicons:arrow-up',
 				'heroicons:briefcase',
 				'heroicons:building-library',

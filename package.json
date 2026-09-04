@@ -6,8 +6,10 @@
 	"scripts": {
 		"automd": "automd",
 		"build": "nuxt build",
+		"postbuild": "node scripts/copy-public-assets.mjs",
 		"dev": "nuxt dev",
 		"generate": "nuxt generate",
+		"postgenerate": "node scripts/copy-public-assets.mjs",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
 		"format": "pnpm exec biome format --write .",
@@ -37,6 +39,7 @@
 		"@vueuse/core": "14.4.0",
 		"@vueuse/nuxt": "14.4.0",
 		"better-sqlite3": "^12.11.1",
+		"motion-v": "2.3.0",
 		"nuxt": "4.5.1",
 		"nuxt-studio": "1.7.0",
 		"resend": "6.18.1",

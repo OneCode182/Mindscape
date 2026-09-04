@@ -1,0 +1,34 @@
+{
+	"name": "DeliverAI — Governed AI Ordering Agent",
+	"slug": "deliverai",
+	"image": "/projects/deliverai-architecture.png",
+	"imageFit": "contain",
+	"link": "https://github.com/tulio3101/DeliverAI",
+	"release": "July 2026",
+	"date": "July 2026",
+	"featured": true,
+	"organization": "Escuela Colombiana de Ingeniería",
+	"type": "Academic project",
+	"summary": "An applied academic MVP that turns unstructured WhatsApp conversations into confirmed, traceable orders through a governed AI agent.",
+	"details": [
+		"Built by a five-person team for the Hyperautomation Architectures course at Escuela Colombiana de Ingeniería Julio Garavito.",
+		"Connects WhatsApp Business, n8n, a LangChain agent, Spring Boot REST, PostgreSQL and a React admin UI.",
+		"Demonstrates structured order capture, explicit customer confirmation, human escalation and operational controls.",
+		"Defined as a functional prototype for a controlled pilot; authentication, full auditability, governed n8n hosting and real-customer validation remain pending."
+	],
+	"technologies": [
+		"Java",
+		"Spring Boot",
+		"PostgreSQL",
+		"React",
+		"TypeScript",
+		"Tailwind CSS",
+		"shadcn/ui",
+		"n8n",
+		"LangChain",
+		"WhatsApp Business",
+		"AWS",
+		"Terraform",
+		"GitHub Actions"
+	]
+}

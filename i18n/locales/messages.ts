@@ -1,10 +1,12 @@
 import en_contact from './en/contact.json';
 import en_global from './en/global.json';
 import en_navigation from './en/navigation.json';
+import en_projects from './en/projects.json';
 import en_writing from './en/writing.json';
 import es_contact from './es/contact.json';
 import es_global from './es/global.json';
 import es_navigation from './es/navigation.json';
+import es_projects from './es/projects.json';
 import es_writing from './es/writing.json';
 
 const messages = {
@@ -12,12 +14,14 @@ const messages = {
 		navigation: es_navigation,
 		contact: es_contact,
 		global: es_global,
+		projects: es_projects,
 		writing: es_writing,
 	},
 	en: {
 		navigation: en_navigation,
 		contact: en_contact,
 		global: en_global,
+		projects: en_projects,
 		writing: en_writing,
 	},
 };

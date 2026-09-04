@@ -52,7 +52,7 @@ defineProps({
             class="group relative w-full cursor-help rounded-lg border border-white/10 bg-white/[0.03] p-4 pb-10 text-left transition-colors duration-200 hover:border-white/25 hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
             :aria-label="`${experience.company} — ${experience.role ?? experience.title} — ${$t('global.view_details')}`"
           >
-            <div class="flex items-start justify-between gap-4">
+            <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
               <div class="min-w-0">
                 <h4 class="break-words font-semibold">
                   {{ experience.company }}
@@ -61,7 +61,7 @@ defineProps({
                   {{ experience.role ?? experience.title }}
                 </p>
               </div>
-              <div class="flex shrink-0 flex-col items-end text-right text-sm text-muted">
+              <div class="flex w-full shrink-0 flex-col items-start text-left text-sm text-muted sm:w-auto sm:items-end sm:text-right">
                 <p>
                   {{ experience.date }}
                 </p>
@@ -117,7 +117,7 @@ defineProps({
           v-else
           class="relative rounded-lg border border-white/10 bg-white/[0.03] p-4"
         >
-          <div class="flex items-start justify-between gap-4">
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
             <div class="min-w-0">
               <h4 class="break-words font-semibold">
                 {{ experience.company }}
@@ -126,7 +126,7 @@ defineProps({
                 {{ experience.role ?? experience.title }}
               </p>
             </div>
-            <div class="flex shrink-0 flex-col items-end text-right text-sm text-muted">
+            <div class="flex w-full shrink-0 flex-col items-start text-left text-sm text-muted sm:w-auto sm:items-end sm:text-right">
               <p>
                 {{ experience.date }}
               </p>

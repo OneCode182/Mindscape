@@ -1,11 +1,36 @@
 <script setup lang="ts">
+// biome-ignore lint/correctness/noUnusedImports: Components are referenced in the Vue template.
+import { MotionConfig } from 'motion-v';
+
 const socialMediaRegexMap = [
-	{ regex: /github\.com/, name: 'GitHub', icon: 'custom:github' },
-	{ regex: /linkedin\.com/, name: 'LinkedIn', icon: 'custom:linkedin' },
+	{
+		regex: /github\.com/,
+		name: 'GitHub',
+		icon: 'custom:github',
+		hoverColor: '#000000',
+		glowColor: '#FFFFFF',
+	},
+	{
+		regex: /linkedin\.com/,
+		name: 'LinkedIn',
+		icon: 'custom:linkedin',
+		hoverColor: '#0966C3',
+		glowColor: '#0966C3',
+	},
 	{
 		regex: /hackerrank\.com/,
 		name: 'HackerRank',
-		icon: 'heroicons:code-bracket',
+		icon: 'custom:hackerrank',
+		hoverColor: '#2EC866',
+		glowColor: '#2EC866',
+	},
+	{
+		regex: /instagram\.com/,
+		name: 'Instagram',
+		icon: 'custom:instagram',
+		hoverIcon: 'custom:instagram-hover',
+		hoverColor: '#E1306C',
+		glowColor: '#E1306C',
 	},
 ];
 
@@ -15,27 +40,24 @@ const mappedSocials = Object.values(socials).map((link) => {
 		social.regex.test(link),
 	);
 	if (!foundSocial) throw new Error(`No social media found for link: ${link}`);
-	const { name, icon } = foundSocial;
-	return { name, link, icon };
+	const { name, icon, hoverIcon, hoverColor, glowColor } = foundSocial;
+	return { name, link, icon, hoverIcon, hoverColor, glowColor };
 });
 </script>
 
 <template>
-  <div class="my-7 flex items-center justify-start gap-6 sm:gap-10">
-    <NuxtLink
-      v-for="social in mappedSocials"
-      :key="social.name"
-      :to="social.link"
-      target="_blank"
-      class="flex items-center justify-center"
-      :aria-label="'Go to ' + social.name + ' profile'"
-    >
-      <UIcon
-        :name="social.icon"
-        class="size-6 text-muted transition-all duration-300 hover:text-neutral-300"
-        :alt="social.name + ' logo'"
-        :aria-label="social.name + ' logo'"
+  <MotionConfig reduced-motion="user">
+    <div class="my-7 flex items-center justify-start gap-6 sm:gap-10">
+      <HomeSocialLink
+        v-for="social in mappedSocials"
+        :key="social.name"
+        :name="social.name"
+        :link="social.link"
+        :icon="social.icon"
+        :hover-icon="social.hoverIcon"
+        :hover-color="social.hoverColor"
+        :glow-color="social.glowColor"
       />
-    </NuxtLink>
-  </div>
+    </div>
+  </MotionConfig>
 </template>

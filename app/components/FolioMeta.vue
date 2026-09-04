@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import type {
-	ContentEnCollectionItem,
-	ContentFrCollectionItem,
-} from '@nuxt/content';
-
 useScriptPlausibleAnalytics({
 	domain: 'canvas.hrcd.fr',
 	scriptInput: {
@@ -11,8 +6,15 @@ useScriptPlausibleAnalytics({
 	},
 });
 
+type MetaPage = {
+	title?: string;
+	name?: string;
+	description?: string;
+	summary?: string;
+};
+
 const { page, isWriting } = defineProps<{
-	page: ContentEnCollectionItem | ContentFrCollectionItem;
+	page: MetaPage;
 	isWriting: boolean;
 }>();
 
@@ -20,10 +22,12 @@ const route = useRoute();
 const { link, seo, profile } = useAppConfig();
 
 const pageSEO = computed(() => ({
-	title: isWriting ? page?.title : page?.title || seo.title,
+	title: isWriting
+		? page.title || page.name
+		: page.title || page.name || seo.title,
 	description: isWriting
-		? page?.description
-		: page?.description || seo.description,
+		? page.description || page.summary
+		: page.description || page.summary || seo.description,
 }));
 
 const getTitleTemplate = (title: string | undefined) => {
