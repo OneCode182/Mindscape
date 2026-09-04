@@ -1,6 +1,6 @@
 export default defineAppConfig({
 	global: {
-		meetingLink: 'https://cal.com/hugorcd/15min',
+		meetingLink: 'https://cal.com/sergio-silva/15min',
 		available: true,
 	},
 	profile: {
