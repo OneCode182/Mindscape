@@ -28,6 +28,8 @@ Read [`../AGENTS.md`](../AGENTS.md) first. Create or resume one task record per 
 | TASK-TEXT-SCRAMBLE-HOVER | [text-scramble-hover.task.md](text-scramble-hover.task.md) | done | Shelve-style hover scramble for portfolio headings |
 | TASK-CV-PROJECTS | [cv-projects.task.md](cv-projects.task.md) | done | CV projects before experience with hover details |
 | TASK-CONTEXT-NAVIGATION | [context-navigation.task.md](context-navigation.task.md) | done | Update root and `.agents/` navigation for imported autoskills |
+| TASK-HOME-BADGE-PRESENTATION | [home-badge-presentation.task.md](home-badge-presentation.task.md) | done | AWS Academy badge below home profile photo |
+| TASK-HOME-BADGE-MOTION | [home-badge-motion.task.md](home-badge-motion.task.md) | done | Motion hover treatment for home profile media |
 
 ## Resume rule
 
