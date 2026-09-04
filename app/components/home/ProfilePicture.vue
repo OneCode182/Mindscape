@@ -50,7 +50,7 @@ const badgeGlowVariants = {
           class="group relative mt-4 will-change-transform"
           initial="rest"
           while-hover="hover"
-          :variants="{ rest: {}, hover: { scale: 0.92, rotate: -4 } }"
+          :variants="{ rest: {}, hover: { scale: 1.08, rotate: -4 } }"
           :transition="springTransition"
         >
           <motion.div

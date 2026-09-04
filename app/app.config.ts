@@ -14,6 +14,7 @@ export default defineAppConfig({
 		github: 'https://github.com/OneCode182',
 		linkedin: 'https://linkedin.com/in/SergioSilvaR1',
 		hackerrank: 'https://www.hackerrank.com/profile/onecode0182',
+		instagram: 'https://www.instagram.com/sergiosilva182',
 	},
 	seo: {
 		title: 'Canvas a Nuxt portfolio template',

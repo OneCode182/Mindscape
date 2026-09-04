@@ -39,7 +39,7 @@ test('home profile presentation centers a larger AWS badge below the photo', () 
 	);
 	assert.match(
 		profilePictureSource,
-		/<motion\.div[\s\S]*while-hover="hover"[\s\S]*scale: 0\.92, rotate: -4/,
+		/<motion\.div[\s\S]*while-hover="hover"[\s\S]*scale: 1\.08, rotate: -4/,
 	);
 	assert.match(profilePictureSource, /bg-cyan-300\/25 blur-3xl/);
 	assert.match(profilePictureSource, /class="relative size-28 object-contain"/);

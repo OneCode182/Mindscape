@@ -30,6 +30,8 @@ Read [`../AGENTS.md`](../AGENTS.md) first. Create or resume one task record per 
 | TASK-CONTEXT-NAVIGATION | [context-navigation.task.md](context-navigation.task.md) | done | Update root and `.agents/` navigation for imported autoskills |
 | TASK-HOME-BADGE-PRESENTATION | [home-badge-presentation.task.md](home-badge-presentation.task.md) | done | AWS Academy badge below home profile photo |
 | TASK-HOME-BADGE-MOTION | [home-badge-motion.task.md](home-badge-motion.task.md) | done | Motion hover treatment for home profile media |
+| TASK-HOME-HACKERRANK-ICON | [home-hackerrank-icon.task.md](home-hackerrank-icon.task.md) | done | Replace HackerRank social icon with local SVG |
+| TASK-HOME-SOCIAL-LINKS-MOTION | [home-social-links-motion.task.md](home-social-links-motion.task.md) | in_progress | Animate social links and add Instagram |
 
 ## Resume rule
 
