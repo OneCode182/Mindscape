@@ -5,6 +5,7 @@ defineProps<{
 	project: Project;
 }>();
 const img = useImage();
+const { activeKey, handleClick, handlePointerDown } = useTouchHoverNavigation();
 </script>
 
 <template>
@@ -25,11 +26,14 @@ const img = useImage();
       :to="project.link"
       target="_blank"
       class="group relative flex cursor-pointer flex-col gap-1 rounded-lg border border-white/10 bg-zinc-900/80 p-1 shadow-2xl shadow-zinc-950/50 backdrop-blur-sm"
+      :class="{ 'touch-hover-active': activeKey === project.name }"
+      @click="handleClick($event, project.name)"
+      @pointerdown="handlePointerDown($event, project.name)"
     >
       <div class="flex gap-1 px-1 py-[2px]">
-        <div class="size-2 rounded-full bg-red-500/90 transition-all duration-300 group-hover:bg-red-500/90 sm:bg-white/10" />
-        <div class="size-2 rounded-full bg-yellow-500/90 transition-all duration-300 group-hover:bg-yellow-500/90 sm:bg-white/10" />
-        <div class="size-2 rounded-full bg-green-500/90 transition-all duration-300 group-hover:bg-green-500/90 sm:bg-white/10" />
+        <div class="size-2 rounded-full bg-red-500/90 transition-all duration-300 group-hover:bg-red-500/90 group-[.touch-hover-active]:bg-red-500/90 sm:bg-white/10" />
+        <div class="size-2 rounded-full bg-yellow-500/90 transition-all duration-300 group-hover:bg-yellow-500/90 group-[.touch-hover-active]:bg-yellow-500/90 sm:bg-white/10" />
+        <div class="size-2 rounded-full bg-green-500/90 transition-all duration-300 group-hover:bg-green-500/90 group-[.touch-hover-active]:bg-green-500/90 sm:bg-white/10" />
       </div>
       <div class="flex h-56 justify-center overflow-hidden rounded-lg">
         <NuxtImg
@@ -38,6 +42,7 @@ const img = useImage();
           width="1536"
           :alt="project.name + ' project image'"
           class="h-full rounded-lg object-cover transition-all duration-300 hover:scale-105"
+          :class="{ 'scale-105': activeKey === project.name }"
           :src="project.image"
           :aria-label="project.name + ' project image'"
         />
@@ -68,7 +73,7 @@ const img = useImage();
               </div>
             </div>
             <div
-              class="flex items-center justify-center rounded-full border border-transparent p-1 shadow-md backdrop-blur-md transition-all duration-500 group-hover:-rotate-45 group-hover:border-white/10"
+              class="flex items-center justify-center rounded-full border border-transparent p-1 shadow-md backdrop-blur-md transition-all duration-500 group-hover:-rotate-45 group-hover:border-white/10 group-[.touch-hover-active]:-rotate-45 group-[.touch-hover-active]:border-white/10"
             >
               <UIcon
                 name="heroicons:arrow-right"

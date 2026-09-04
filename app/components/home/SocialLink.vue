@@ -12,6 +12,7 @@ interface Props {
 }
 
 const props = defineProps<Props>();
+const { activeKey, handleClick, handlePointerDown } = useTouchHoverNavigation();
 
 const tooltipId = `social-tooltip-${props.name.toLowerCase().replaceAll(' ', '-')}`;
 
@@ -43,6 +44,7 @@ const springTransition = {
     class="group relative flex items-center justify-center will-change-transform"
     initial="rest"
     while-hover="hover"
+    :animate="activeKey === props.name ? 'hover' : 'rest'"
     :variants="linkVariants"
     :transition="springTransition"
     :style="{ '--social-hover-color': props.hoverColor }"
@@ -59,6 +61,8 @@ const springTransition = {
       class="relative flex size-10 items-center justify-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white/70"
       :aria-label="`Go to ${props.name} profile`"
       :aria-describedby="tooltipId"
+      @click="handleClick($event, props.name)"
+      @pointerdown="handlePointerDown($event, props.name)"
     >
       <span
         class="relative block size-8"
@@ -67,12 +71,14 @@ const springTransition = {
         <UIcon
           :name="props.icon"
           class="absolute inset-0 size-8 text-muted transition-[opacity,color,filter] duration-300 group-hover:opacity-0 group-focus-visible:opacity-0"
+          :class="{ 'opacity-0': activeKey === props.name }"
           :alt="`${props.name} logo`"
           aria-hidden="true"
         />
         <UIcon
           :name="props.hoverIcon || props.icon"
           class="absolute inset-0 size-8 text-[var(--social-hover-color)] opacity-0 transition-[opacity,color,filter] duration-300 group-hover:opacity-100 group-focus-visible:opacity-100"
+          :class="{ 'opacity-100': activeKey === props.name }"
           :alt="`${props.name} logo hovered`"
           aria-hidden="true"
         />

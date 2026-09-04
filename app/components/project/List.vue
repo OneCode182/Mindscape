@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const localePath = useLocalePath();
+const { activeKey, handleClick, handlePointerDown } = useTouchHoverNavigation();
 </script>
 
 <template>
@@ -8,9 +9,12 @@ const localePath = useLocalePath();
       v-for="project in projects.filter(() => project.featured)"
       :key="project.name"
       class="flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1 rounded-lg px-4 py-2 hover:bg-secondary sm:flex-nowrap"
+      :class="{ 'touch-hover-active': activeKey === project.name }"
       :to="project.release === 'soon' ? localePath('/') : project.link"
       :aria-label="project.name + ' project link'"
       :target="project.release === 'soon' ? '_self' : '_blank'"
+      @click="handleClick($event, project.name)"
+      @pointerdown="handlePointerDown($event, project.name)"
     >
       <span class="min-w-0 break-words">
         {{ project.name }}

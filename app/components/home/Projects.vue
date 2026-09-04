@@ -3,6 +3,7 @@ import type { Collections } from '@nuxt/content';
 
 const { locale } = useI18n();
 const localePath = useLocalePath();
+const { activeKey, handleClick, handlePointerDown } = useTouchHoverNavigation();
 
 const { data: projects } = await useAsyncData(
 	`projects-${locale.value}`,
@@ -43,9 +44,12 @@ const { data: projects } = await useAsyncData(
           <NuxtLink
             role="link"
             class="flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1 rounded-lg px-4 py-2 hover:bg-neutral-900 sm:flex-nowrap"
+            :class="{ 'touch-hover-active': activeKey === project.name }"
             :to="project.release === 'soon' ? localePath('/') : project.link"
             :aria-label="'go to ' + project.name + ' project website'"
             :target="project.release === 'soon' ? '_self' : '_blank'"
+            @click="handleClick($event, project.name)"
+            @pointerdown="handlePointerDown($event, project.name)"
           >
             <span class="min-w-0 break-words font-medium">
               {{ project.name }}
@@ -64,7 +68,11 @@ const { data: projects } = await useAsyncData(
         </UPopover>
       </template>
     </div>
-    <NuxtLinkLocale to="/works">
+    <NuxtLinkLocale
+      to="/works"
+      @click="handleClick"
+      @pointerdown="handlePointerDown"
+    >
       <span class="font-newsreader italic text-white-shadow cursor-pointer">
         <ScrambleText :label="$t('global.see_more')" />
       </span>

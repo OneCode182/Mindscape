@@ -1,5 +1,13 @@
 <script setup lang="ts">
 const { t } = useI18n();
+const requestUrl = useRequestURL();
+const isLocalEnvironment = computed(() =>
+	['localhost', '127.0.0.1', '::1'].includes(requestUrl.hostname),
+);
+const touchNavigation = useTouchHoverNavigation();
+
+const deployUrl =
+	'https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FOneCode182%2FMindscape%2Ftree%2Fmain&project-name=mindscape-portfolio';
 </script>
 
 <template>
@@ -13,6 +21,8 @@ const { t } = useI18n();
           <NuxtLinkLocale
             class="font-mona relative flex max-w-full items-center justify-center gap-2 text-center bg-gradient-to-b from-white/25 to-white bg-clip-text text-lg font-medium text-transparent transition-all duration-200"
             to="/contact"
+            @click="touchNavigation.handleClick"
+            @pointerdown="touchNavigation.handlePointerDown"
           >
             {{ t("global.contact") }}
             <UIcon
@@ -24,8 +34,17 @@ const { t } = useI18n();
       </UTooltip>
       <MeetingButton />
     </div>
-    <div class="mt-4 flex flex-col items-center gap-1">
-      <NuxtLink href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHugoRCD%2Fcanvas&env=NUXT_PRIVATE_RESEND_API_KEY,NUXT_PUBLIC_SITE_URL,STUDIO_GITHUB_CLIENT_ID,STUDIO_GITHUB_CLIENT_SECRET&envDescription=You%20will%20require%20an%20API%20key%20for%20Resend%20and%20Nuxt%20Studio%2C%20but%20it%20is%20not%20essential%20for%20the%20portfolio%20to%20work.%20Simply%20add%20%22test%2C%22%20for%20example%2C%20and%20edit%20the%20variable%20later.&project-name=canvas-portfolio&repository-name=canvas-portfolio&demo-title=Canvas&demo-url=canvas.hrcd.fr&demo-image=https%3A%2F%2Fcanvas.hrcd.fr%2Fog.png">
+    <div
+      v-if="isLocalEnvironment"
+      class="mt-4 flex flex-col items-center gap-1"
+    >
+      <NuxtLink
+        :to="deployUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        @click="touchNavigation.handleClick"
+        @pointerdown="touchNavigation.handlePointerDown"
+      >
         <img
           src="https://vercel.com/button"
           alt="Deploy with Vercel"

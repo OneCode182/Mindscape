@@ -11,6 +11,7 @@ const _navigation = getNavigation('home') as Record<string, Navigation>;
 const route = useRoute();
 const localePath = useLocalePath();
 const navigation = _navigation;
+const { activeKey, handleClick, handlePointerDown } = useTouchHoverNavigation();
 </script>
 
 <template>
@@ -32,9 +33,12 @@ const navigation = _navigation;
               localePath(item.to) === route.path
                 ? 'border border-white/5 bg-zinc-900/10 text-white/75 shadow-2xl shadow-white/50 backdrop-blur-3xl text-shadow-sm'
                 : 'text-muted',
+              { 'touch-hover-active': activeKey === item.name },
             ]"
             :to="localePath(item.to)"
             class="flex min-h-11 min-w-11 flex-1 items-center justify-center rounded-full border border-transparent px-1 py-1 transition-all duration-300 ease-in-out hover:border-white/5 hover:bg-zinc-900/50 hover:backdrop-blur-3xl sm:flex-none sm:px-6"
+            @click="handleClick($event, item.name)"
+            @pointerdown="handlePointerDown($event, item.name)"
           >
             <UIcon
               :name="item.icon"
