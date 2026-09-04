@@ -1,6 +1,6 @@
 export default defineAppConfig({
 	global: {
-		meetingLink: 'https://cal.com/hugorcd/15min',
+		meetingLink: 'https://cal.com/sergio-silva/15min',
 		available: true,
 	},
 	profile: {
@@ -14,6 +14,7 @@ export default defineAppConfig({
 		github: 'https://github.com/OneCode182',
 		linkedin: 'https://linkedin.com/in/SergioSilvaR1',
 		hackerrank: 'https://www.hackerrank.com/profile/onecode0182',
+		instagram: 'https://www.instagram.com/sergiosilva182',
 	},
 	seo: {
 		title: 'Canvas a Nuxt portfolio template',

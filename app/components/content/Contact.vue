@@ -48,7 +48,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20">
+  <section class="mx-auto mt-4 flex max-w-4xl flex-col px-4 py-7 sm:mt-20 sm:px-7">
     <h1 class="font-newsreader italic text-white-shadow text-center text-4xl">
       <ScrambleText>
         <slot

@@ -1,18 +1,10 @@
 <script setup lang="ts">
 import type { Collections } from '@nuxt/content';
-import { joinURL, withLeadingSlash } from 'ufo';
 
 const route = useRoute();
 const { locale, localeProperties, t } = useI18n();
 
-const slug = computed(() =>
-	Array.isArray(route.params.slug)
-		? (route.params.slug as string[])
-		: [route.params.slug as string],
-);
-const path = computed(() =>
-	withLeadingSlash(joinURL(locale.value, ...slug.value)),
-);
+const path = computed(() => route.path);
 const collection = computed(
 	() => `content_${locale.value}` as keyof Collections,
 );
