@@ -2,6 +2,10 @@
 
 Role contracts for focused Mindscape work. Profiles select skills; they do not replace the root boot contract.
 
+## Navigation
+
+Read [`../AGENTS.md`](../AGENTS.md) first. Resolve each profile's `skills` entry through [`../skills/README.md`](../skills/README.md); entries without local files refer to runtime-provided skills.
+
 ## Create
 
 1. Copy [`_template.agent.md`](_template.agent.md) to `<name>.agent.md`.

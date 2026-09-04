@@ -4,6 +4,8 @@ Human-gated sequences for repeatable multi-step work. Workflows route agents; th
 
 ## Navigation
 
+Read [`../AGENTS.md`](../AGENTS.md) first. Load workflow doc only after matching task route and approval requirements.
+
 | Workflow | Trigger | Output |
 |---|---|---|
 | [github-pr-human-loop.workflow.md](github-pr-human-loop.workflow.md) | Compare, audit, describe, create/update a PR | Paused evidence at each gate |
