@@ -24,8 +24,8 @@ const badgeGlowVariants = {
 
 <template>
   <MotionConfig reduced-motion="user">
-    <div class="z-10 flex items-center justify-center lg:-translate-y-6 lg:justify-end">
-      <div class="flex flex-col items-center">
+    <div class="z-10 flex w-full min-w-0 items-center justify-center lg:-translate-y-6 lg:justify-end">
+      <div class="flex max-w-full flex-col items-center">
         <motion.div
           class="group relative will-change-transform"
           initial="rest"
@@ -41,7 +41,7 @@ const badgeGlowVariants = {
           <ProseImg
             width="384"
             :src="profile.picture!"
-            class="relative size-64 rounded-3xl border border-white/15 object-cover grayscale transition duration-500 group-hover:grayscale-0 sm:size-80 lg:size-[26rem]"
+            class="relative size-[min(80vw,26rem)] max-w-full rounded-3xl border border-white/15 object-cover grayscale transition duration-500 group-hover:grayscale-0 sm:size-80 lg:size-[26rem]"
             :alt="`${profile.name} profile picture`"
             :aria-label="`${profile.name} profile picture`"
           />
