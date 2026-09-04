@@ -33,6 +33,7 @@ Read [`../AGENTS.md`](../AGENTS.md) first. Create or resume one task record per 
 | TASK-HOME-HACKERRANK-ICON | [home-hackerrank-icon.task.md](home-hackerrank-icon.task.md) | done | Replace HackerRank social icon with local SVG |
 | TASK-HOME-SOCIAL-LINKS-MOTION | [home-social-links-motion.task.md](home-social-links-motion.task.md) | in_progress | Animate social links and add Instagram |
 | TASK-RESPONSIVE-PORTFOLIO | [responsive-portfolio.task.md](responsive-portfolio.task.md) | done | Mobile-first responsive portfolio preserving desktop layout |
+| TASK-ROUTING-DEPLOY-TOUCH | [routing-deploy-touch.task.md](routing-deploy-touch.task.md) | done | Root Spanish routing, local Vercel Deploy visibility, touch hover navigation |
 
 ## Resume rule
 
