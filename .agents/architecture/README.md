@@ -2,6 +2,10 @@
 
 Technical placement and decisions for Mindscape. Architecture is the authority for where new code belongs; source code proves current implementation.
 
+## Navigation
+
+Read [`../AGENTS.md`](../AGENTS.md) first. Load this index, then only architecture doc matching current change.
+
 ## Documents
 
 | ID | File | Scope | Load when |
