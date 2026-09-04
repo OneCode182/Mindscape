@@ -1,5 +1,6 @@
 {
 	"name": "DeliverAI — Agente IA gobernado para pedidos",
+	"slug": "deliverai",
 	"image": "/projects/deliverai-architecture.png",
 	"imageFit": "contain",
 	"link": "https://github.com/tulio3101/DeliverAI",

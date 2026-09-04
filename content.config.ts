@@ -127,6 +127,7 @@ const commonArticleSchema = z.object({
 
 const commonProjectSchema = z.object({
 	name: z.string().nonempty(),
+	slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
 	image: z.string().nonempty().optional(),
 	imageFit: z.enum(['cover', 'contain']).optional(),
 	link: z.string().url(),

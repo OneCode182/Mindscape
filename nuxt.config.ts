@@ -14,10 +14,7 @@ export default defineNuxtConfig({
 			const publicAssets = nuxt.options.nitro.publicAssets ?? [];
 
 			if (!publicAssets.some((asset) => asset.dir === publicDir)) {
-				nuxt.options.nitro.publicAssets = [
-					{ dir: publicDir },
-					...publicAssets,
-				];
+				nuxt.options.nitro.publicAssets = [{ dir: publicDir }, ...publicAssets];
 			}
 		},
 	],
@@ -137,6 +134,7 @@ export default defineNuxtConfig({
 				'heroicons:arrow-left',
 				'heroicons:arrow-path',
 				'heroicons:arrow-right',
+				'heroicons:arrow-up-right',
 				'heroicons:arrow-up',
 				'heroicons:briefcase',
 				'heroicons:building-library',

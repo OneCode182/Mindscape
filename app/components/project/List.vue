@@ -1,18 +1,28 @@
 <script setup lang="ts">
+import type { Project } from '~/types/project';
+import { prioritizeDeliverAI } from '~/utils/projects';
+
+const { projects } = defineProps<{
+	projects: Project[];
+}>();
 const localePath = useLocalePath();
+const router = useRouter();
 const { activeKey, handleClick, handlePointerDown } = useTouchHoverNavigation();
+
+const orderedProjects = computed(() =>
+	prioritizeDeliverAI(projects.filter((project) => project.featured)),
+);
 </script>
 
 <template>
   <div class="flex w-full flex-col gap-4">
     <NuxtLink
-      v-for="project in projects.filter(() => project.featured)"
-      :key="project.name"
+      v-for="project in orderedProjects"
+      :key="project.slug"
       class="flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1 rounded-lg px-4 py-2 hover:bg-secondary sm:flex-nowrap"
       :class="{ 'touch-hover-active': activeKey === project.name }"
-      :to="project.release === 'soon' ? localePath('/') : project.link"
-      :aria-label="project.name + ' project link'"
-      :target="project.release === 'soon' ? '_self' : '_blank'"
+      :to="localePath(`/project/${project.slug}`)"
+      :aria-label="$t('projects.open_details', { name: project.name })"
       @click="handleClick($event, project.name)"
       @pointerdown="handlePointerDown($event, project.name)"
     >
@@ -27,7 +37,7 @@ const { activeKey, handleClick, handlePointerDown } = useTouchHoverNavigation();
     <div class="mt-4 flex justify-center">
       <button
         class="btn-primary"
-        @click="useRouter().push('/works')"
+        @click="router.push(localePath('/projects'))"
       >
         {{ $t("global.see_more") }}
       </button>

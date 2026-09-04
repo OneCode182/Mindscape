@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Collections } from '@nuxt/content';
+import { prioritizeDeliverAI } from '~/utils/projects';
 
 const { locale } = useI18n();
 
@@ -14,6 +15,10 @@ const { data: projects } = await useAsyncData(
 	{
 		watch: [locale],
 	},
+);
+
+const orderedProjects = computed(() =>
+	prioritizeDeliverAI(projects.value ?? []),
 );
 </script>
 
@@ -36,8 +41,8 @@ const { data: projects } = await useAsyncData(
     <Divider class="mb-8 mt-2" />
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
       <ProjectCard
-        v-for="project in projects"
-        :key="project.name"
+        v-for="project in orderedProjects"
+        :key="project.slug"
         :project
       />
     </div>

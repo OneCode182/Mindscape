@@ -1,0 +1,12 @@
+{
+	"open_details": "Abrir detalles del proyecto {name}",
+	"back": "Volver a proyectos",
+	"summary": "Resumen",
+	"highlights": "Aspectos destacados",
+	"technologies": "Tecnologías",
+	"visit": "Visitar proyecto",
+	"share": "Compartir proyecto",
+	"copy_link": "Copiar enlace del proyecto",
+	"link_copied": "Enlace del proyecto copiado al portapapeles",
+	"not_found": "Proyecto no encontrado"
+}

@@ -1,0 +1,12 @@
+{
+	"open_details": "Open {name} project details",
+	"back": "Back to projects",
+	"summary": "Summary",
+	"highlights": "Highlights",
+	"technologies": "Technologies",
+	"visit": "Visit project",
+	"share": "Share project",
+	"copy_link": "Copy project link",
+	"link_copied": "Project link copied to clipboard",
+	"not_found": "Project not found"
+}

@@ -1,5 +1,6 @@
 {
 	"name": "DeliverAI — Governed AI Ordering Agent",
+	"slug": "deliverai",
 	"image": "/projects/deliverai-architecture.png",
 	"imageFit": "contain",
 	"link": "https://github.com/tulio3101/DeliverAI",
