@@ -173,7 +173,7 @@ export const collections = {
 			source: {
 				include: 'es/**/*.md',
 				exclude: ['es/articles/*.md'],
-				prefix: '/es',
+				prefix: '',
 			},
 			schema: commonContentSchema,
 		}),
@@ -193,7 +193,7 @@ export const collections = {
 			type: 'page',
 			source: {
 				include: 'es/articles/*.md',
-				prefix: '/es/articles',
+				prefix: '/articles',
 			},
 			schema: commonArticleSchema,
 		}),

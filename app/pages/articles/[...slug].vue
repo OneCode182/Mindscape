@@ -1,18 +1,11 @@
 <script lang="ts" setup>
 import type { Collections } from '@nuxt/content';
-import { joinURL, withLeadingSlash } from 'ufo';
 
 const route = useRoute();
 const { locale, t, localeProperties } = useI18n();
+const { activeKey, handleClick, handlePointerDown } = useTouchHoverNavigation();
 
-const slug = computed(() =>
-	Array.isArray(route.params.slug)
-		? (route.params.slug as string[])
-		: [route.params.slug as string],
-);
-const path = computed(() =>
-	withLeadingSlash(joinURL(locale.value, 'articles', ...slug.value)),
-);
+const path = computed(() => route.path);
 const collection = computed(
 	() => `articles_${locale.value}` as keyof Collections,
 );
@@ -59,6 +52,9 @@ defineOgImage({
     <NuxtLinkLocale
       to="/writing"
       class="mx-auto my-8 flex min-w-0 cursor-pointer items-center gap-2 px-4 text-muted transition-colors duration-200 hover:text-primary sm:max-w-2xl md:max-w-3xl lg:max-w-4xl"
+      :class="{ 'text-primary': activeKey === 'article-back' }"
+      @click="handleClick($event, 'article-back')"
+      @pointerdown="handlePointerDown($event, 'article-back')"
     >
       <UIcon
         name="heroicons:arrow-left"

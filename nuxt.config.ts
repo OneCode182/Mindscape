@@ -61,8 +61,8 @@ export default defineNuxtConfig({
 	},
 
 	routeRules: {
-		// Needed to activate preview on Nuxt Studio
-		'/': { prerender: false },
+		// Keep Studio preview dynamic in dev; emit the default locale root in production.
+		'/': { prerender: process.env.NODE_ENV === 'production' },
 	},
 
 	experimental: {
@@ -78,7 +78,7 @@ export default defineNuxtConfig({
 		prerender: {
 			autoSubfolderIndex: false,
 			crawlLinks: true,
-			routes: ['/es', '/en'],
+			routes: ['/', '/en'],
 		},
 	},
 
@@ -105,7 +105,7 @@ export default defineNuxtConfig({
 			fallbackLocale: 'es',
 			redirectOn: 'root',
 		},
-		strategy: 'prefix',
+		strategy: 'prefix_except_default',
 		defaultLocale: 'es',
 	},
 
