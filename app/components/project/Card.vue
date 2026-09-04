@@ -41,8 +41,11 @@ const { activeKey, handleClick, handlePointerDown } = useTouchHoverNavigation();
           :placeholder="img(`${project.image}`)"
           width="1536"
           :alt="project.name + ' project image'"
-          class="h-full rounded-lg object-cover transition-all duration-300 hover:scale-105"
-          :class="{ 'scale-105': activeKey === project.name }"
+          class="h-full rounded-lg transition-all duration-300 hover:scale-105"
+          :class="[
+            project.imageFit === 'contain' ? 'object-contain' : 'object-cover',
+            { 'scale-105': activeKey === project.name },
+          ]"
           :src="project.image"
           :aria-label="project.name + ' project image'"
         />

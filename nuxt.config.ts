@@ -9,6 +9,17 @@ export default defineNuxtConfig({
 		'@nuxt/image',
 		'@nuxt/scripts',
 		'vue-sonner/nuxt',
+		(_options, nuxt) => {
+			const publicDir = nuxt.options.dir.public;
+			const publicAssets = nuxt.options.nitro.publicAssets ?? [];
+
+			if (!publicAssets.some((asset) => asset.dir === publicDir)) {
+				nuxt.options.nitro.publicAssets = [
+					{ dir: publicDir },
+					...publicAssets,
+				];
+			}
+		},
 	],
 
 	imports: {

@@ -128,6 +128,7 @@ const commonArticleSchema = z.object({
 const commonProjectSchema = z.object({
 	name: z.string().nonempty(),
 	image: z.string().nonempty().optional(),
+	imageFit: z.enum(['cover', 'contain']).optional(),
 	link: z.string().url(),
 	release: z.string().nonempty(),
 	date: z.string().nonempty().optional(),
