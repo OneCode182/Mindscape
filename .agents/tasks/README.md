@@ -32,6 +32,7 @@ Read [`../AGENTS.md`](../AGENTS.md) first. Create or resume one task record per 
 | TASK-HOME-BADGE-MOTION | [home-badge-motion.task.md](home-badge-motion.task.md) | done | Motion hover treatment for home profile media |
 | TASK-HOME-HACKERRANK-ICON | [home-hackerrank-icon.task.md](home-hackerrank-icon.task.md) | done | Replace HackerRank social icon with local SVG |
 | TASK-HOME-SOCIAL-LINKS-MOTION | [home-social-links-motion.task.md](home-social-links-motion.task.md) | in_progress | Animate social links and add Instagram |
+| TASK-RESPONSIVE-PORTFOLIO | [responsive-portfolio.task.md](responsive-portfolio.task.md) | done | Mobile-first responsive portfolio preserving desktop layout |
 
 ## Resume rule
 
