@@ -26,6 +26,12 @@
       "sourceType": "autoskills-registry",
       "computedHash": "8a52f7cd26bc9bbc477a086b9c33a901fd6c68df8cd7d49417270e44c1ad88c6"
     },
+    "responsive-design": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/ui-design/skills/responsive-design/SKILL.md",
+      "computedHash": "794cc7f1b2f79d398135d19ef3fe32c406dde926b9bdf86ee3fe7b939a0be906"
+    },
     "seo": {
       "source": "addyosmani/web-quality-skills",
       "sourceType": "autoskills-registry",
