@@ -37,12 +37,18 @@ html.dark {
 	--font-placeholder: #707070;
 }
 
+html {
+	scroll-padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+}
+
 html,
 body,
 #__nuxt,
 #__layout {
 	height: 100%;
+	min-height: 100%;
 	width: 100%;
+	overflow-x: clip;
 
 	::-webkit-scrollbar {
 		width: 0.5rem;
@@ -52,6 +58,13 @@ body,
 	::-webkit-scrollbar-thumb {
 		background: var(--bg-card);
 		border-radius: 0.5rem;
+	}
+}
+
+@layer base {
+	img,
+	video {
+		max-width: 100%;
 	}
 }
 
