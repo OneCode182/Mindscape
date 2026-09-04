@@ -52,9 +52,22 @@ test('preserves cover crops by default and contains the DeliverAI diagram', () =
 
 test('includes root public assets in static Nuxt output', () => {
 	const nuxtConfig = readSource('nuxt.config.ts');
+	const packageJson = readJson('package.json');
 
 	assert.match(
 		nuxtConfig,
-		/nuxt\.options\.nitro\.publicAssets = \[\{ dir: publicDir \}, \.\.\.publicAssets\];/,
+		/nuxt\.options\.nitro\.publicAssets\s*=\s*\[\s*\{\s*dir:\s*publicDir\s*\},\s*\.\.\.publicAssets\s*\];/,
+	);
+	assert.equal(
+		existsSync(resolve(repositoryRoot, 'scripts/copy-public-assets.mjs')),
+		true,
+	);
+	assert.equal(
+		packageJson.scripts.postbuild,
+		'node scripts/copy-public-assets.mjs',
+	);
+	assert.equal(
+		packageJson.scripts.postgenerate,
+		'node scripts/copy-public-assets.mjs',
 	);
 });

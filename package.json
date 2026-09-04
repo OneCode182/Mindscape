@@ -6,8 +6,10 @@
 	"scripts": {
 		"automd": "automd",
 		"build": "nuxt build",
+		"postbuild": "node scripts/copy-public-assets.mjs",
 		"dev": "nuxt dev",
 		"generate": "nuxt generate",
+		"postgenerate": "node scripts/copy-public-assets.mjs",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
 		"format": "pnpm exec biome format --write .",
