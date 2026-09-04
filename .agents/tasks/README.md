@@ -35,6 +35,7 @@ Read [`../AGENTS.md`](../AGENTS.md) first. Create or resume one task record per 
 | TASK-RESPONSIVE-PORTFOLIO | [responsive-portfolio.task.md](responsive-portfolio.task.md) | done | Mobile-first responsive portfolio preserving desktop layout |
 | TASK-ROUTING-DEPLOY-TOUCH | [routing-deploy-touch.task.md](routing-deploy-touch.task.md) | done | Root Spanish routing, local Vercel Deploy visibility, touch hover navigation |
 | TASK-DELIVERAI-PROJECT | [deliverai-project.task.md](deliverai-project.task.md) | in-progress | Add DeliverAI academic project with paper architecture diagram |
+| TASK-PROJECT-PAGES-MOTION | [project-pages-motion.task.md](project-pages-motion.task.md) | in-progress | DeliverAI-first project cards, hover previews, Motion interactions, and detail routes |
 
 ## Resume rule
 
