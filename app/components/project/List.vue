@@ -7,16 +7,16 @@ const localePath = useLocalePath();
     <NuxtLink
       v-for="project in projects.filter(() => project.featured)"
       :key="project.name"
-      class="flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 hover:bg-secondary"
+      class="flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1 rounded-lg px-4 py-2 hover:bg-secondary sm:flex-nowrap"
       :to="project.release === 'soon' ? localePath('/') : project.link"
       :aria-label="project.name + ' project link'"
       :target="project.release === 'soon' ? '_self' : '_blank'"
     >
-      <span class="whitespace-nowrap">
+      <span class="min-w-0 break-words">
         {{ project.name }}
       </span>
-      <div class="mx-2 h-[0.1px] w-full bg-muted" />
-      <span class="whitespace-nowrap text-muted">
+      <div class="hidden min-w-4 flex-1 bg-muted sm:block" />
+      <span class="shrink-0 text-muted">
         {{ project.release === "soon" ? $t("global.soon") + "..." : project.release }}
       </span>
     </NuxtLink>

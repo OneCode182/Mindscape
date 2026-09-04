@@ -42,16 +42,16 @@ const { data: projects } = await useAsyncData(
         >
           <NuxtLink
             role="link"
-            class="flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 hover:bg-neutral-900"
+            class="flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1 rounded-lg px-4 py-2 hover:bg-neutral-900 sm:flex-nowrap"
             :to="project.release === 'soon' ? localePath('/') : project.link"
             :aria-label="'go to ' + project.name + ' project website'"
             :target="project.release === 'soon' ? '_self' : '_blank'"
           >
-            <span class="whitespace-nowrap font-medium">
+            <span class="min-w-0 break-words font-medium">
               {{ project.name }}
             </span>
-            <div class="mx-2 h-[0.1px] w-full bg-muted" />
-            <span class="whitespace-nowrap">
+            <div class="hidden min-w-4 flex-1 bg-muted sm:block" />
+            <span class="shrink-0 text-muted">
               {{ project.release === "soon" ? $t("global.soon") + "..." : project.release }}
             </span>
           </NuxtLink>
